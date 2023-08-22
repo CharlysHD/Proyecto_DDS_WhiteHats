@@ -3,6 +3,8 @@
 # Se trata de un Trabajo Aplicativo de la materia de Desarrollo de Software.
 
 En este proyecto intentaremos simular a una empresa de Restaurante con tienda Fisica, Con funcionalidades ya sea de comprar via web y acercarce al local en busca del alimento pedido o de comprar y utilizar el servicio de delivery via web.
+
+
 Los usuarios podran registrarse, ver el producto, realizar una compra de dicho producto, a su vez, podran ver el carrito con el total de su pedido.
 
 # Grupo: TheWhiteHats
