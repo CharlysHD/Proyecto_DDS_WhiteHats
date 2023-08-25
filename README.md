@@ -2,10 +2,9 @@
 
 # Se trata de un Trabajo Aplicativo de la materia de Desarrollo de Software.
 
-En este proyecto intentaremos simular a una empresa de Restaurante con tienda Fisica, con funcionalidades ya sea de comprar via web y acercarce al local en busca del alimento pedido o de comprar y utilizar el servicio de delivery via web.
+En este proyecto intentaremos simular una aplicación web para un restaurante con tienda física, ya sea comprando via web y retirando por el local o de comprar y utilizar el servicio de delivery.
 
-
-Los usuarios podran registrarse, ver el producto, realizar una compra de dicho producto, a su vez, podran ver el carrito con el total de su pedido.
+El desarrollo contempla las distintas fases de trabajo del local desde la venta hasta la entrega de los pedidos. Los módulos desarrollados son: módulo de usuarios, para la utilización del sistema de las distintas personas involucradas, tanto administradores y empleados como clientes; módulo de pedidos que facilita la experiencia de compra de los clientes; módulo de administración de pedidos para las tareas del cajero; módulo de cocina; módulo de facturación; módulo para la administración de los rubros, ingredientes y productos; y un módulo de estadística para conocer información sobre las ventas.
 
 # Grupo: TheWhiteHats
 # Integrantes: 
