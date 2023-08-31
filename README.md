@@ -3,14 +3,13 @@
 
 # Grupo: TheWhiteHats
 # Integrantes: 
-          -Ontivero, Nicolas
-          -Oropel, Marcos
-          -Montero, Bruno
-          -Di Francisco, Sofia
-          -Mañani, Camila
           -Vargas, Lucas
+          -Oropel, Marcos
+          -Ontivero, Nicolas
+          -Montero, Bruno
+          -Mañani, Camila
           -Gutierrez, Carlos
-
+          -Di Francisco, Sofia
 
 # Se trata de un Trabajo Aplicativo de la materia de Desarrollo de Software.
 
