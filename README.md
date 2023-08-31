@@ -16,4 +16,4 @@ El desarrollo contempla las distintas fases de trabajo del local desde la venta 
           -Vargas, Lucas
           -Gutierrez, Carlos
           
-El Repositorioen figma: https://www.figma.com/file/OmGYlWrHgnZXJTpQvtPcpP/El_Buen_Sabor?type=design&node-id=0-1&mode=design&t=vpT6MngfuOAN0NaF-0
+El Repositorio en figma: https://www.figma.com/file/OmGYlWrHgnZXJTpQvtPcpP/El_Buen_Sabor?type=design&node-id=0-1&mode=design&t=vpT6MngfuOAN0NaF-0
