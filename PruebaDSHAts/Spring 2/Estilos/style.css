@@ -181,18 +181,12 @@ body {
 
 .contact-footer {
     text-align: left;
-    position: absolute;
-    bottom: 60px;
-    right: 30px;
-    color: #ffff
-}
+    position: absolute; 
+    top: 15px; 
+    right: 235px;
+    } 
 
-.contact-footer h2 {
-    color: #B29C46;
-}
-
-
-.pie {
+.pie{
     background-color: #4D4D4D;
     text-align: center;
     width: 100%;
