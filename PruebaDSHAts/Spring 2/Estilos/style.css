@@ -181,6 +181,7 @@ body {
 
 .contact-footer {
     text-align: left;
+<<<<<<< HEAD
     position: absolute;
     bottom: 60px;
     right: 30px;
@@ -193,6 +194,14 @@ body {
 
 
 .pie {
+=======
+    position: absolute; 
+    top: 15px; 
+    right: 235px;
+    } 
+
+.pie{
+>>>>>>> c075adceebfb698df998dba3a3730d34e0831b0a
     background-color: #4D4D4D;
     text-align: center;
     width: 100%;
