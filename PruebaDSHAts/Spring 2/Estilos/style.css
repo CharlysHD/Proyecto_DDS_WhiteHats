@@ -14,6 +14,11 @@
     width: 100%;
     top: 0;
     left: 0;
+    
+}
+.headeraltura{
+    height: 10%;
+
 }
 
 .nav {
@@ -185,6 +190,11 @@ body {
     top: 15px; 
     right: 235px;
     } 
+
+    .formulario {
+        width: 100%;
+        
+    }
 
 .pie{
     background-color: #4D4D4D;
