@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>H4 Registro de un nuevo empleado</title>
+    <script src="https://kit.fontawesome.com/2c046f8524.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--icono eye -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/8201e63b6c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- probando git -->
+<!-- probando git desde rama lucas -->
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="LogoNombre.svg" width="196" height="48" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item active positionCarrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" width= "30" height="30" viewBox="0 0 576 512" style="fill: #B29C46;"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <i class="fas fa-search" style="color: #B29C46;"></i>
+                </form>
+                
+                <div class="dropdown my-2 my-lg-0" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mi cuenta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark mx-md-n5" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                          <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+            </div>
+            
+        </nav>
+
+    <!--Imagen fondo-->
+    <div class="card mb-3">
+        <img class="card-img-top" src="1vc6te2q.png" width="1438" height="220" alt="fondo">
+    </div>
+
+    <section class="container">
+        <form novalidate>
+            <!-- Formulario de Registro -->
+            <div class="p-3 m-0 border-0 bd-example">
+                <p class="fs-1">Registrar nuevo empleado</p>
+                <div class="mb-3 row ">
+                    <label for="disabledInputNombre" class="col-sm-2 col-form-label">Nombre:</label>
+                    <!-- Cambiar en style.css general el tamaño de los input agregar clase input-form-->
+                    <div class="col-sm-10 col-form">
+                        <input type="text" placeholder="Pepe" class="form-control" id="disabledInputNombre" disabled>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputApellido" class="col-sm-2 col-form-label">Apellido:</label>
+                    <div class="col-sm-10 col-form">
+                        <input type="text" placeholder="Argento" class="form-control" id="inputApellido" disabled>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="validationInputEmail" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-10 col-form">
+                        <input type="email" placeholder="PepeArgento@gmail.com" class="form-control"
+                            id="validationInputEmail" disabled>
+                            <div class="success-message"><i class="fas fa-check"></i>
+                                El Email es correcto y no fue registrado previamente.
+                            </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputTelefono" class="col-sm-2 col-form-label">Telefono:</label>
+                    <div class="col-sm-10 col-form">
+                        <input type="tel" placeholder="2613334444" class="form-control" id="inputTelefono" disabled>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputDepartamento" class="col-sm-2 col-form-label">Departamento:</label>
+                    <div class="col-sm-10 col-form">
+                        <input type="text" placeholder="Departamento" class="form-control" id="inputDepartamento"
+                            disabled>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputDireccion" class="col-sm-2 col-form-label">Direccion:</label>
+                    <div class="col-sm-10 col-form">
+                        <input type="text" placeholder="Direccion" class="form-control" id="inputDireccion" disabled>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputContrasenia" class="col-sm-2 col-form-label">Contraseña:</label>
+                    <div class="col-sm-10 col-form">
+
+                        <input type="password" name="password" placeholder="Asd1234." class="form-control"
+                            id="inputClave" disabled>
+                        <spam class="fa fa-fw fa-eye password-icon show-password"></spam>
+
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="confirmpassword" class="col-sm-2 col-form-label">Confirmar Contraseña:</label>
+                    <div class="col-sm-10 col-form">
+
+                        <input type="password" name="password" placeholder="Escriba nuevamente la contraseña"
+                            class="form-control" id="confirmpassword">
+                        <spam class="fa fa-fw fa-eye password-icon show-password"></spam>
+                        <div class="form-text confirm-message"></div>
+
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="validationRol" class="col-sm-2 col-form-label">Rol Empleado:</label>
+                    <div class="col-sm-10 col-form">
+                        <select class="form-select" id="validationRol" required>
+                            <option selected disabled value="">Elegir Rol</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-primary2">Registrar nuevo empleado</button>
+                <!-- cambiar color desde css;agregar clase-->
+                <button type="submit" class="btn btn-primary btn-secondary2">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+
+
+    <!--FOOTER-->
+    <footer class="footer" style="background: #A52326;">
+        <div class=" d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top footer-div">
+            <a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                <ul class="footer-list list-unstyled">
+                    <img src="LogoNombre.svg" >
+                    <div class="social-icons-container">
+                        <a class="icons" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm"></i></a>
+                        <a class="icons" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="icons" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <!-- <ul class="footer-list list-unstyled">
+                        <li><a href="www.facebook.com" class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 512 512" style="fill: white;"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></li>
+                          </a>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 512 512" style="fill: white;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 448 512" style="fill: white;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></li>
+                    </a> -->
+                </ul>
+            </ul>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                <h4 class="footer-title" style="color: #B29C46;">Contacto</h4>
+                <p><h5>+548619424522</h5></p>
+                <p><h5>Av. San Martín 2340</h5></p>
+                <p><h5>ElbuenSabor@gmail.com</h5></p>
+            </div>
+        </div>
+        <div class="pie" >
+            <p >&copy; 2023 El Buen Sabor | By The White Hats</p>
+        </div> 
+    </footer>
+
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+            $('#password, #confirmpassword').on('keyup', function () {
+
+                $('.confirm-message').removeClass('success-message').removeClass('error-message');
+
+                let password = $('#password').val();
+                let confirm_password = $('#confirmpassword').val();
+//cambiar la confirmacion de pass cuando veamos js
+                if (password === "") {
+                    $('.confirm-message').text("Las contraseñas no coinciden").addClass('error-message');
+                }
+                else if (confirm_password === "") {
+                    $('.confirm-message').text("Las contraseñas no coinciden").addClass('error-message');
+                }
+                else if (confirm_password === "Asd1234.") {
+                    $('.confirm-message').text('Las contraseñas coinciden').addClass('success-message');
+                }
+                /* else if (confirm_password === password) {
+                    $('.confirm-message').text('Las contraseñas coinciden').addClass('success-message');
+                } */
+                else {
+                    $('.confirm-message').text("Las contraseñas no coinciden").addClass('error-message');
+                }
+                
+            });
+        </script>
+
+</body>
+
+</html>
