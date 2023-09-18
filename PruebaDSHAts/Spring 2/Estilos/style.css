@@ -186,17 +186,39 @@ body {
 
 .contact-footer {
     text-align: left;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    color: #ffff
+}
+
+.contact-footer h2 {
+    color: #B29C46;
+}
+
+
+.pie {
+=======
+>>>>>>> 6b0f55e6b8f01bacc32983b3865a301b23a04eaf
     position: absolute; 
     top: 15px; 
     right: 235px;
     } 
 
+<<<<<<< HEAD
     .formulario {
         width: 100%;
         
     }
 
 .pie{
+=======
+.pie{
+>>>>>>> c075adceebfb698df998dba3a3730d34e0831b0a
+>>>>>>> 6b0f55e6b8f01bacc32983b3865a301b23a04eaf
     background-color: #4D4D4D;
     text-align: center;
     width: 100%;
