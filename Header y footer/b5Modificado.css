@@ -104,22 +104,33 @@
     left: 0;
     width: 100%;
    position: absolute;
-   border: 8px;
-   border-style: dashed;
-   border-color: yellow;
+ 
+   
 }
-
+.logo-footer {
+    font-size: 30px;
+    padding: 0 40px;
+    line-height: 80px;
+    margin-bottom: 10px;
+ 
+}
 .social-icons-container{
     font-size: 4rem;
     margin-bottom: 21px;
     
  }
-
+ .icons{
+    color:#ffff;
+    letter-spacing:10px ;
+    
+}
 .pie{
 text-align: center;
 position: absolute;
 border: 8px;
-   border-style: dashed;
-   border-color: blue;
+width: 100%;
+background-color: #4D4D4D;
+color: black;
+width: 100%;
 }
 
