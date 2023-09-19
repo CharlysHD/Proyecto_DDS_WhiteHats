@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking Clientes</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="b5Modificado.css">
+  
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="LogoNombre.svg" width="196" height="48" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item active positionCarrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" width= "30" height="30" viewBox="0 0 576 512" style="fill: #B29C46;"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control mr-sm-2" type="search" placeholder="pizz" aria-label="Search">
+                    <i class="fas fa-search" style="color: #B29C46;"></i>
+                </form>
+                
+                <div class="dropdown my-2 my-lg-0" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mi cuenta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark mx-md-n5" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                          <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+            </div>
+            
+        </nav>
+
+        <!--Imagen fondo-->
+        <div class="card mb-3">
+            <img class="card-img-top" src="1vc6te2q.png" width="1438" height="220" alt="fondo">
+        </div>
+    <h1>Ranking de Pedidos</h1>
+    <p></p>
+<span><b>Ordenar Por: </b></span>
+    <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Tipo</option>
+        <option value="1">Cant. Pedidos</option>
+        <option value="2">Importe Total</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Seleccione...</option>
+        <option value="1">Mayor</option>
+        <option value="2">Menor</option>
+      </select>
+      <button type="button" class="btn btn-link btn-sm btn-rounded">
+        Filtrar
+      </button>
+      <p></p>
+      <span><b>Fecha Desde: </b></span>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Mes</option>
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Dia</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Año</option>
+        <option value="1">2009</option>
+        <option value="2">2010</option>
+        <option value="3">2011</option>
+        <option value="4">2012</option>
+        <option value="5">2013</option>
+        <option value="6">2014</option>
+        <option value="7">2015</option>
+        <option value="8">2016</option>
+        <option value="9">2017</option>
+        <option value="10">2018</option>
+        <option value="11">2019</option>
+        <option value="12">2020</option>
+        <option value="13">2021</option>
+        <option value="14">2022</option>
+        <option value="15">2023</option>
+      </select>
+      <p></p>
+      <span><b>Fecha Hasta: </b></span>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Mes</option>
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Dia</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Año</option>
+        <option value="1">2009</option>
+        <option value="2">2010</option>
+        <option value="3">2011</option>
+        <option value="4">2012</option>
+        <option value="5">2013</option>
+        <option value="6">2014</option>
+        <option value="7">2015</option>
+        <option value="8">2016</option>
+        <option value="9">2017</option>
+        <option value="10">2018</option>
+        <option value="11">2019</option>
+        <option value="12">2020</option>
+        <option value="13">2021</option>
+        <option value="14">2022</option>
+        <option value="15">2023</option>
+      </select>
+      <button type="button" class="btn btn-link btn-sm btn-rounded">
+        Filtrar
+      </button>
+
+
+
+
+
+
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+          <tr>
+            <th>Nombre</th>
+            <th>N° Pedidos</th>
+            <th>Importe</th>
+            <th>Detalle de Pedidos</th>
+            <th>Exportar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW_BqeGxkiWf6HTdnP--EMJmc1xLYMPm2ZzrwpslgdhQ&s"
+                    alt=""
+                    style="width: 45px; height: 45px"
+                    class="rounded-circle"
+                    />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Michael Jackson</p>
+                  <p class="text-muted mb-0">michael.uwu@gmail.com</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">21</p>
+            </td>
+            <td><p class="fw-normal mb-1">$ 152.000</p>
+            </td>
+            <td><button type="button" class="btn-p2 btn-primary2 btn btn-warning">Ver</button></td>
+            <td>
+              <button type="button" class="btn btn-link btn-sm btn-rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><style>svg{fill:#ffd500}</style><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM155.7 250.2L192 302.1l36.3-51.9c7.6-10.9 22.6-13.5 33.4-5.9s13.5 22.6 5.9 33.4L221.3 344l46.4 66.2c7.6 10.9 5 25.8-5.9 33.4s-25.8 5-33.4-5.9L192 385.8l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4L162.7 344l-46.4-66.2c-7.6-10.9-5-25.8 5.9-33.4s25.8-5 33.4 5.9z"/></svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJAAsQMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQMGAAIHAf/EAEUQAAIBAwMBBAYFCQYFBQAAAAECAwAEEQUSITETQVFhBhQicYGRMqGxwdEHFSNCUlNicuEzQ1SSsvAkgoOU0hZjc4Si/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAECAwT/xAAiEQADAQACAgICAwAAAAAAAAAAARECAyESMUFhE1EycYH/2gAMAwEAAhEDEQA/AOXvIdwyKOt1VkBFDXnZK46j4VJZyLg7c8V3rfZzNdBgCoOTitJF3co1aTHeANpqWBTGuSpxVPVcJSgD2weTs3wT50QYCq+zgigbu4PrYWWEhc8OBTiMbo+OmKy423po03IARqO0x0PhRsSDpQs0YDgkA0Vbqw5A4866MPo52+yZoBt4pXLAWkbH2U33ZGBzQUiDecintDyyC0hKygHrToRhlC9wpfbJ+mGOlOI1ox0hbfZCtuAanEArdYyTRKwnvq6TQQW4rb1dccDmjRBUnY8dKVAr93AO06ZpdPEOMCrBdxYl+iflS+WN2blcChstMCtYMyqKeLajs/hQ9jak3A4p+LbEfTuqbAZT9UhCEClskRYeVWTWIV7UAnHPlSbUNgXCsMfzVlyP5NM+gDsB+19VZUe4eJ/z1lY+RYeFUzZcjH8XFZbRq07BD391LlnmmO1EJI699aGaaJjwynyqfMfiWme0WO1EuSWoZJVPsNkD+WgrK4llXY8jEfsmjoIWJ3bTV+VIagt1HTZBKs0TBlznaRiioZgYsdCOooyV3TjBA8CKEcdSU5PhSSSdQN1GjOGOKOt1JUDxpd2DdoDyKc6emY8t17q249Gesm4tgUyQR7qAddrlWGT4mn0Y9nkjFDSWgkdiefhVvRKQDaRFpRjpThISOaEjRLZwDx/McUwgJlZTGvsZ5Of60eaDWWzFj5GRRUcQx0IqeC3Xg7mY+S8UaLZSMAY8zSfICwBRx7jgCixa4UGt4rbZJktRWBtyCG8cVk+Q0WBLNbZmOBQVxZncPZwM+FMLiSMXDdvMygdAuBQ8WoWSXPZHI3DhmJOaPyoPEjtLbbNxTGZSsJPgKjtQjyl16dwqTUe1MDCIDOKPOg0UvVy895we/pSq8gIlCnLe4ZNMbubZqKLLGu8H9nNDa083aht4A8OB9QrPWh5QH6v/AO1J8hWVF6xJ4pWVkXDWzdo2/RHk/tVLMSJNs0a7j/DWWWm3SFZG4UnwqwjRre+A3zAOB3ChGgvtLeFYmcMAwGcVLZzBWwxyp86ZzaUtraGOJtzHjr91BW9nKk3ZkhABnmqrRLVNr2RFj9nb86yG2lmVXjQEcHOaD1gvDJGWctk42g5q4aZHElgrRw+1jmqTYnkqk1u6z4dGI8BR9orBPYQ8Hjvp7PYOWMpb2SBwBUaxxxOOzQefvp41GGsOCqa57JDvZAemCMZqvSek0hfZbxKVHILd9W3WIAbdoolQ3jIWjj8V/WJ8uaq/oJ6NJruttDc59WtwWlCn6ZzgLU8nLB8fHehDqF5d3UhaeV/Ec4HwrSy1DUNOmEtrdOvP0d2Q3vFdn1z8mWl3VjI9qzwXRX2X3ZXPduHh0ril3ay208ttdIY5YWKup8RWWeVb9G++Pw9nTPRz0jtNV2QkmC64DIOhNWdUKk5PzrhWnXEtpdRzW27tYzuG0c8dfhjr5V1/TLm6uh6zJI36VATE3IjxnoeMk5OT7qtbbMXgcnBrx5HjBRAm3xJNDq4PG8Z99SlgAQxGPOnSYL7C2txeTNeqJN2BGzDjz4r2/wBJh3xyW8fHkKZr2UkQXauF6YHStw6xxEFuAO+pZSRDYWkUduWYe1UN/wCzExjGTjjimFtsZTt5pbqStLvRJ+yOMZFQ+TxH+Ns5/OWvNa2yIu7Pn91A69DMt7tkyqHpxgU70m2nj9IcmXtNpPORTP0ntbe5Oe1WN8cZOM1VbRMhQ+wT9pvlWUx/N4/xcH+Zvwryl2MYadZSSSrE8w4PK1a7PT7aN32oAQOo76X6T6PudWkeW5Oe5VP3Va005bdd27PPOa0ymhuFevowwGEYnxAqt3t5Ik/YRpJvPBO2usR2cJRfYzkVXL6CFNSKG3B545Apaoiv2GgC+sTc3kxLpyo6YpzoCXF3AwZdqDpTeLS2lsmWHKqwzyc156OQy7ZoHGDG2K0T6A1fS2WYySMDHsxjzoWztGa5nLLiP9Q1a5rfdAVI5xS47YIeFzIvd41CY2yk62o9buLe6s1lmmiQWz9PZGSSPAjn5fAI/wAnutT6S9zHZ29vNdXDqscTuwZjzwqqpJq2axqGpXlpcWtppeoR3BwI9lqzq+Tj6S+z8SRikX5MbOxg1O9tNXtYzewybezkAYoRwffzWfK1OzXhTeui+69qerXeg20+lCQzSnMkNngs/iFZhwB7s93WuVflB0q/s731y7tDHDM3ZLKXZu0IGcndzkj7K7BPqBt9RRJWtooYpM73m9oqR0x3f0pF+UqE6vo08MREgUdpGwOeR0rmxudQ6eTiqtORei1za2upbb+IPA42uxOAo8z4GunaRPaGBYbadJUBPtI25RknjI8KpHoVbIPSG27SPdHJaDfkcEt0zXS49NgtQTb20ceeuxQtdmDh0FWtik+NwU/Ctb2ytYnAZQPhXkEs8B9hgo+dT3HZ3KfpQxbvIq3RJIFt44QSI2GK1uoO2iMaPgk9aliSKEnCHnyqbslYZUGl/YP6BYLd7ZXJm9nFLbJo7qWRJi2DwWHfS30mutWWRoLS3fsum/PWrF6LxI2nx+sRhZscilrOX7Ls9MAGmWFhulgdFYnqzZryW2t5k3yFXbyp5d6bbyZ9nHuNRx2UaoFCZA8aqkQR+q2/7H1VlPPVY/3a/KsoooC6dFCmtyqI1EhHUN92asElvuQAivIdIgGqNeq/tkYPtcfKmrRoFz1qHouC6SWG3VO1cLngZqielXpBFb6s0awSOEw28HANNPTB9Qa7tobW3ynaDczJnj5VPfaTDeCKOWFlYj2nVP6VVSFPob+iVyupaNFcbSgcdGOcUxaK2sy7ggM3J86CsrVLKxWKHtAqjA4x91eLalvaa4lyf4f6VPyMHutWYvsVcjyqHcZuqsvvFFtZx9p7crMD4qPwoe/u9J0SMXGqXWyNmCIpPLHwAqqkSONBit5N7EKWBxgnHFUj0h0JPR/WdW1yDY8W6O6m3t+kUO7BgnkNykjv2Cj730q0JLVnguWAwTi3ID7e87iQPrrkfpdrh1jUllgll7CKIRIWbkjknPxP1VjtNvs1y56OrabFp2orNdC+tzFcN2jFvbOficCq56Y+kVrBZSaZpD9oirtllH0QP2R5mqb6H2dreaoLLUO0QTJ+hAYqC3gceIzTL03tl05IIYIwkecBVHlWKwk4dL5XrFEWka5cWF4JZCZVJQSD9bavTB7q6v6KTfn+5DQSsIShcsTz15GM+NcVTmUbepPdVm9GJb/Tb63uYHnt7cyczlhGnPHDNgfjXVnbShyNJnansreG4MM0wDAbuvdWdhZD6Nx/+q09GIbfVbaa7uJ0upGbGVkD/ZXurxadp1xHHJCuHXIOenvqs6TJ0mgS7SKN8LIWzUKSujcLvH8xH3000yDTdREywsjGPAYI+ce+oZlSxunhKM6DowYfZVeSJjgMrrMcSRbcfxk1tKibR2bkHyNYZYix2xyge4VCZWjk/scjxJFJsERFLpDlZSw8DUkVzMnEij4NUc92wf2Y0A7/AGxULXpAyY2P8ozRBh/rSeXzryl/rw/cy/5a8pQKXZLi3Kg9qoH84rSW/tUGO3XPkwqnQbmQK0wwO5mxRSRoBy8B+NH4yvIZXj2lzMjNckMpzhZE/Ciu2tyoCXDA+TL+FI/0YbOxM+K1ussX7sE+6n4C8nIOWlTo1848iU/CvUkX/HsR5bPwpK8iMdqwjJ8Tii4LaJVzIiA+AkXH+qjxJPb/AFAQL7F3Izd2FU/dXIfS/Vzr2ttJK0j21sDDHgfRb9Y7R4n7B1xV/wDTzV4dK9HLo25CXMw7GMq/ILdSCD1AzXG7WRYZYweDnOc/7/2fhUbfwXlHrCWaLcGA2nAA46848/6e6thakoQX7NuPpfRJI6E91Mey7RiwTBZvbQd567fLP0h55HfW1vcNaIZoIopWJL4ZQwmTncDnvGfqyOlQmMCgknicTgv61BICM/qnjB+quhekkMWtabpmpW6ZinCPg87TkBgfdzVQKW3axXcEW7erPsXAUp1Ax3HxwcZp96DarbM1xpbOPU3BngLn+yP66k8cd9RtdVGnG+4yoy20VnrE0ZAKxSsUyoZcg5AYHqOORVhuPT/VZbZ7C9trG6s5VMbxmPbwR0BHTy7x40hv50ubu5uYf7GSSWXHkWOPtxQNge0uNkrkK5yx8Ov3kVXwS/ZbvQC+vLP1ySwS8kuBtCwW57s8lvHw99OpPSTUVvnlvtB1KY9Mljn8K57aaneaZem6sbuWCeLIWSM7T9LkeY8jxXedNuob3RNPudWigF7Lbo0w249ojPTu91LK7E30USxvtSGpNqFhpeqW4k4McTDJ578kVcoSZIlebTNS7RuW3FCf9VPNPGkD6CwZPkPwqW4i098jEXwFaJxijEBjX/AXwHmV/wDKtQir9Czus+e0/YaaPZ2J+i6Chpbe0TgSxVdJaYtnE0gwICo88/8AjUPq0f60Mmf4cffiiZorcZxLF9f4UKwhTkPG3uzVRk0z1aL91cf5l/GsqHtUrKPFhRTHqDj+7zRSahJj+yquduR9B3I8Sa2W4kz9JvnWtQoWYX0p6R1NayzXDbV7JPEySBR9dILF4pJQLueWOPvKKSaeRv6PIMM+oyebAD7hScAcQK8K+1caUT/HKrH6qIE7Dnt9J+AB+6kDXXo8v9zfH/m/rWLf6ADxZ3p98n9agZWvysXEjLplv21rIrvI5FuuORtAz8zVBuEQTFQyMj/RdTnAqwenl7Bea9/wkbJFbwhdrNuO7r94qsrtOAc5z3eHlXPr2aL0OLdbnYLmMYjxtV1A7uPiPf8AMVKElEiy/oy4bdjHGfEeRBwR3cHpUKwy2iiP1j25FB9hhhPBi/QfP5UNcia3ZZY5zuXDKyjpnz+PxoAnnnexuOxVSIYZVuEjYYbDBW2E+GPsNbX9jFBczGGUpCv0GI/tM+BHHeB8ailu/Wpzdy9mszqAUHsrlcY48wMU0sY49UeytTk79rS7uF4Ruc88YjGfdQAkYNDYRqVP/ER5HHcHNRWSbi8h+jGu4/7/AN9aMvZo5dJsYoQcRLIHb3kNj6+feKEhD+qOqqdjMN79yj3+PlSGQHBBJOWJxXc9Ou1u9CsrxRntYEJ5yc4wfrBrifYFwVgQuVJ58u410z0U1u3j0SGzjhhM0O4tG6bsKzFh0PH0sY68Vpx/yJ36HJvzGSAOa3j1YscdPeDUNvq8MrkS2dkD/wDD/WvfzkQ+FsrHGf3Ardpfoz7Dkvy36yD30NdX23q6fI0fa3oMeTBag+UQoHUNQljPsQWhHnAppVfoOxdJqSc7ivwoVtSTOAwrebWZ1J/RWg/+sv4VCNbuP3Vn/wBsn4Vf+CM/OA8a8rb89XH7my/7ZaynfoQhTccCnmmaTFMoe9vYoB+yGGfrpZHCCOAT7hUqW5zwr/5aiF0sqaZoSD2r8t/1l+4V6bT0fXrcsf8AqH7hSKOBscI5+BqX1aQ9I3+VKfYUamL0bX+8kP8AzSH7BWD/ANMjpHK3xl5+ula2Mp/unrb83THpGfiwoi/YUous6fNEbi+lIHbXRVUIPCZJBz4d2KUSwSQv+lRgB1PjV+9KbNoNDnkmXAUrt9oH2s8VQJHLKFwmOvsqAcnxPWufajNE6ja6EAnZbWSSSLIKl1wTx4e+iJRKbfs5CTt3MQPHv+WftoOAhJkZztUEc46UfaLLddjaRDtJCHLc9ASDyfh9dSMisBJJI6rH2m5eAB1NMdNu/wAzx37biZ2iMUakHKM2VORjjCs3zFDmIQh+wmDbSvtxnk5HPI8Ce7woVDIWaWQmUuAGDH6Wc/hTgjRQRahVbJc5IznaB3nw/p7qztCbdY2BZIwdoDcAk9aOtNKnur4WNu0bNKmVDseP6iotYs/zbqBs3YSSwoFYrwAxJP3il0nBzqh2mWEd9ZzSwo008Ee99nDoPceCM94waH0fW5dPuWZmaSGQbWB6+R99BQ3U1lddpbSMjKSMg9R3g1A6lJMMpXodvgDTs7QpS+pciQJNEdyNyrDwp1BKsiIVOTVG9F7lxLJbFhJGE3qP2Tkfbmrbps6hxEU69OeldWdeSpm1GPEkwnUj4Uvvp3ycEkVI6nnBNAXBYE80ABTTnJyKFac9wqeQtk80O+7yoA19YrytdreVZQBafXYh0dR7q89fTub5GkQk5rcSedQMdG/A72rw6gP2W+VKO2I76zt/OmIbfnEdAr/VWw1L+A/Ok/a56mpAyqMg5oAi9NLzttBZduMyKTz51QrYwidGuFZolOWVepq3ek8gbSGA/bAqmA81hyezTPoN1B9Pco2nwzxjHtdqwIz5UGrFcgE5PBwetSRPsZX2Zx18zmj7eJtQMkzRgDd+kZeAgKnH+kmoGDtdKbbailXDIeOhAXB+JIB+NT3jiGK3MQG5wH3+BAPB8+aGsbcXN9BAzhFkkClj3DPUV1jWfROyu9Ejhs4Bm3AZFzjtMdQT3Z8fOp1yeDSLzxvabKJ6HPLZ6163KyAojBmc5AGOT8vtpNqt8dR1Oe9bI7SQsB5ZrVmuHmkEzMjSuwdR7OWHdju5IFCHnmn80m9Q2fLsW8eaY22nT6ke2iyqhVXe4wOAAee/pUGkWpu7+KMAFQdzkjIAHj/vvq8ttVAqkAL0VRgCtcZvshsVafpqWAJQlpGGGc/d4UbF2iuGB7+tau2D1rBLjjNbKJQh9jxJWZM7u6gblmLHnNDRXKgbWJ+deO/nSGatnPJqF/fXrPUTPRQM+NeV5vrKdA//2Q=="
+                    class="rounded-circle"
+                    alt=""
+                    style="width: 45px; height: 45px"
+                    />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Elizabeth Esposito</p>
+                  <p class="text-muted mb-0">lalali.18@gmail.com</p>
+                </div>
+              </div>
+            </td>
+            <td>
+                    <p class="fw-normal mb-1">5</p>
+                  </td>
+                  <td><p class="fw-normal mb-1">$ 18.100</p>
+                  </td>
+                  <td><button type="button" class="btn-p2 btn-primary2 btn btn-warning">Ver</button></td>
+                  <td>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><style>svg{fill:#ffd500}</style><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM155.7 250.2L192 302.1l36.3-51.9c7.6-10.9 22.6-13.5 33.4-5.9s13.5 22.6 5.9 33.4L221.3 344l46.4 66.2c7.6 10.9 5 25.8-5.9 33.4s-25.8 5-33.4-5.9L192 385.8l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4L162.7 344l-46.4-66.2c-7.6-10.9-5-25.8 5.9-33.4s25.8-5 33.4 5.9z"/></svg>
+                    </button>
+                  </td>
+                </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img
+                    src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                    class="rounded-circle"
+                    alt=""
+                    style="width: 45px; height: 45px"
+                    />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Kate Hunington</p>
+                  <p class="text-muted mb-0">kate.sorich@gmail.com</p>
+                </div>
+              </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">32</p>
+              </td>
+              <td><p class="fw-normal mb-1">$ 224.500</p>
+              </td>
+              <td><button type="button" class="btn-p2 btn-primary2 btn btn-warning">Ver</button></td>
+              <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><style>svg{fill:#B29C46}</style><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM155.7 250.2L192 302.1l36.3-51.9c7.6-10.9 22.6-13.5 33.4-5.9s13.5 22.6 5.9 33.4L221.3 344l46.4 66.2c7.6 10.9 5 25.8-5.9 33.4s-25.8 5-33.4-5.9L192 385.8l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4L162.7 344l-46.4-66.2c-7.6-10.9-5-25.8 5.9-33.4s25.8-5 33.4 5.9z"/></svg>
+                </button>
+              </td>
+            </tr>
+            
+        </tbody>
+      </table>
+         <!--FOOTER-->
+    <footer class="footer" style="background: #A52326;">
+        <div class=" d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top footer-div">
+            <a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                <ul class="footer-list list-unstyled">
+                    <img src="LogoNombre.svg" >
+                    <div class="social-icons-container">
+                        <a class="icons" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm"></i></a>
+                        <a class="icons" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="icons" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <!-- <ul class="footer-list list-unstyled">
+                        <li><a href="www.facebook.com" class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 512 512" style="fill: white;"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></li>
+                          </a>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 512 512" style="fill: white;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width= "50" height="50" viewBox="0 0 448 512" style="fill: white;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></li>
+                    </a> -->
+                </ul>
+            </ul>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                <h4 class="footer-title" style="color: #B29C46;">Contacto</h4>
+                <p><h5>+548619424522</h5></p>
+                <p><h5>Av. San Martín 2340</h5></p>
+                <p><h5>ElbuenSabor@gmail.com</h5></p>
+            </div>
+        </div>
+        <div class="pie" >
+            <p >&copy; 2023 El Buen Sabor | By The White Hats</p>
+        </div> 
+    </footer>
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            </section>
+</body>
+</html>
