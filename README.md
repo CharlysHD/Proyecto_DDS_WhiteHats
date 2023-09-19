@@ -22,3 +22,6 @@ Publico Objetivo: Todo mundo
 
 # Repositorio en figma: 
 https://www.figma.com/file/Pb7F32pIQclHS1S80NrScO/Untitled?type=design&node-id=0%3A1&mode=design&t=yYKKF3XiJPHlWvnJ-1
+# JIRA:
+https://thewhitehats.atlassian.net/jira/software/projects/EBS/boards/1
+
