@@ -2,10 +2,7 @@ package com.desarrollo.Spring3.entities;
 
 import com.desarrollo.Spring3.enums.Rating;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.math.BigDecimal;
@@ -16,6 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class DetalleProducto extends Base {
 
     @NotNull
@@ -28,7 +26,7 @@ public class DetalleProducto extends Base {
 
     @NotNull
     @Column(name = "rating")
-    private Rating rating;
+    private Rating ratingInsumo;
 
     @NotNull
     @ManyToOne()

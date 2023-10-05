@@ -1,10 +1,7 @@
 package com.desarrollo.Spring3.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.math.BigDecimal;
@@ -15,6 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class DetalleFactura extends Base {
 
     @NotNull

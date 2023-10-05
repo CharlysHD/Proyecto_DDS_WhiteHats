@@ -18,6 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Rubro extends Base {
 
 
@@ -58,5 +59,23 @@ public class Rubro extends Base {
     @JoinColumn(name = "rubro-id")
     //@Builder.Default
     private List<ArticuloInsumo> articuloInsumos = new ArrayList<>();
+
+    public void agregarArticulos(ArticuloInsumo articulos) {
+        articuloInsumos.add(articulos);
+    }
+
+    public void mostrarArticulos() {
+        System.out.println("Los artículos de este rubro son: ");
+        for (ArticuloInsumo articuloInsumo : articuloInsumos) {
+            System.out.println("Denominación: " + articuloInsumo.getDenominacion() + "Precio de compra: " + articuloInsumo.getPrecioCompra()
+                    + "Stock actual: " + articuloInsumo.getStockActual() + "Stock mínimo: " + articuloInsumo.getStockMinimo() + "Imágen: "
+                    + articuloInsumo.getUrlImagen() + "Fecha de baja: " + articuloInsumo.getFechaBaja() + "Fecha de alta: "
+                    + articuloInsumo.getFechaAlta() + "Fecha de modificación: " + articuloInsumo.getFechaModificacion());
+        }
+    }
+
+    public void agregarDetalleProducto(DetalleProducto detallesProd) {
+        detalleProductos.add(detallesProd);
+    }
 
 }

@@ -15,6 +15,7 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
+@Builder
 public class Producto extends Base {
 
     @NotNull
