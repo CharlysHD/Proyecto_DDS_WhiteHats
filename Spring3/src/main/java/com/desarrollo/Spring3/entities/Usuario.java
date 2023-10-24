@@ -3,6 +3,7 @@ package com.desarrollo.Spring3.entities;
 import com.desarrollo.Spring3.enums.Rol;
 import jakarta.persistence.*;
 
+
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
@@ -41,5 +42,6 @@ public class Usuario extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
+
 
 }

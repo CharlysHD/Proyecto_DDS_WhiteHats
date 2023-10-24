@@ -25,6 +25,7 @@ public class Venta extends Base {
     @Column(name = "importe-total")
     private float importeTotal;
 
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
     @JoinColumn(name = "codigo-venta")
     private List<VentaFactura> ventaFacturas = new ArrayList<>();

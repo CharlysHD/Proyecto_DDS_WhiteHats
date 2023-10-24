@@ -63,14 +63,14 @@ public class Spring3Application {
 
 			Usuario usuario1 = Usuario.builder()
 					.auth0Id("123")
-					.username("BlueRose")
+					.username("Admin")
 					.rol(Rol.CLIENTE)
 					.fechaAlta(format.parse("01-01-2000"))
 					.fechaModificacion(format.parse("01-01-2020"))
 					.fechaBaja(format.parse("01-01-2021"))
 					.build();
 			Usuario usuario = Usuario.builder()
-					.auth0Id("123")
+					.auth0Id("1234")
 					.username("emple")
 					.rol(Rol.EMPLEADO)
 					.fechaAlta(format.parse("01-01-2000"))
@@ -79,9 +79,9 @@ public class Spring3Application {
 					.build();
 
 			Cliente cliente = Cliente.builder()
-					.nombre("Sofía")
-					.apellido("Di Francisco")
-					.email("sofi@gmail.com")
+					.nombre("Pepe")
+					.apellido("Simpson")
+					.email("pepito@gmail.com")
 					.telefono("2614816169")
 					.fechaAlta(format.parse("07-10-2021"))
 					.fechaModificacion(format.parse("08-10-2021"))
@@ -159,6 +159,7 @@ public class Spring3Application {
 					.domicilioEntrega(domicilio)
 					.cliente(cliente)
 					.build();
+
 			Pedido pedido = Pedido.builder()
 					.total(BigDecimal.valueOf(99999))
 					.totalCosto(BigDecimal.valueOf(99999))
@@ -166,10 +167,11 @@ public class Spring3Application {
 					.tipoEnvio(TipoEnvio.DELIVERY)
 					.formaPago(FormaPago.MERCADO_PAGO)
 					.build();
+
 			ArticuloInsumo articuloInsumo = ArticuloInsumo.builder()
 					.denominacion("Queso")
 					.urlImagen("https://www.lacasadelqueso.com.ar/wp-content/uploads/2017/08/queso-mozzarella.jpg")
-					.receta("")
+					.receta("recetaCompletar")
 					.stockActual(BigDecimal.valueOf(100))
 					.stockMinimo(BigDecimal.valueOf(1))
 					.precioCompra(BigDecimal.valueOf(230))
@@ -179,7 +181,7 @@ public class Spring3Application {
 			ArticuloInsumo articuloInsumo1 = ArticuloInsumo.builder()
 					.denominacion("Azucar")
 					.urlImagen("https://empresasiansa.cl/wp-content/uploads/2020/02/azucar.jpg")
-					.receta("")
+					.receta("recetaCompletar")
 					.stockActual(BigDecimal.valueOf(100))
 					.stockMinimo(BigDecimal.valueOf(1))
 					.precioCompra(BigDecimal.valueOf(230))
@@ -201,7 +203,7 @@ public class Spring3Application {
 
 			DetalleProducto detalleProducto = DetalleProducto.builder()
 					.rating(Rating.ARTICULO_RATING)
-					.receta("")
+					.receta("recetaCompletan")
 					.cantidad(BigDecimal.valueOf(10))
 					.producto(producto1)
 					.build();
@@ -250,29 +252,41 @@ public class Spring3Application {
 					.subtotalCosto(BigDecimal.valueOf(99999))
 					.build();
 
-				articuloInsumoRepository.save(articuloInsumo);
-				articuloInsumoRepository.save(articuloInsumo1);
-				clienteRepository.save(cliente);
-				detalleFacturaRepository.save(detalleFactura);
-				detallePedidoRepository.save(detallePedido1);
-				detallePedidoRepository.save(detallePedido2);
-				detalleProductoRepository.save(detalleProducto);
-				domicilioRepository.save(domicilio);
-				domicilioRepository.save(domicilio1);
-				empleadoRepository.save(empleado);
-				facturaRepository.save(factura1);
-				facturaRepository.save(factura2);
-				pedidoRepository.save(pedido1);
-				pedidoRepository.save(pedido);
-				productoRepository.save(producto);
-				productoRepository.save(producto1);
-				rubroRepository.save(rubro1);
-				rubroRepository.save(rubro);
-				unidadMedidaRepository.save(unidadMedida);
-				ventaFacturaRepository.save(ventaFactura);
-				usuarioRepository.save(usuario);
-				usuarioRepository.save(usuario1);
-				ventaRepository.save(venta);
+// Primero, guarda las entidades que no tienen dependencias
+			unidadMedidaRepository.save(unidadMedida);
+			usuarioRepository.save(usuario);
+			usuarioRepository.save(usuario1);
+
+// Luego, guarda las entidades que dependen de unidadesMedida, usuario y usuario1
+			productoRepository.save(producto);
+			productoRepository.save(producto1);
+			rubroRepository.save(rubro1);
+			rubroRepository.save(rubro);
+			clienteRepository.save(cliente);
+			empleadoRepository.save(empleado);
+			domicilioRepository.save(domicilio);
+			domicilioRepository.save(domicilio1);
+
+			//le agregue esto
+			pedidoRepository.save(pedido1);
+			pedidoRepository.save(pedido);
+
+			detallePedidoRepository.save(detallePedido1);
+			detallePedidoRepository.save(detallePedido2);
+			facturaRepository.save(factura1);
+			facturaRepository.save(factura2);
+			ventaRepository.save(venta);
+
+			ventaFacturaRepository.save(ventaFactura);
+
+			detalleFacturaRepository.save(detalleFactura);
+
+			detalleProductoRepository.save(detalleProducto);
+
+
+			articuloInsumoRepository.save(articuloInsumo);
+			articuloInsumoRepository.save(articuloInsumo1);
+
 		};
 	}
 }
