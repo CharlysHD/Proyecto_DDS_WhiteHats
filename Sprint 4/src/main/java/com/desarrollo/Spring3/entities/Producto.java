@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-@Table(name = "articulo_manufacturado")
+@Table(name = "producto")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
