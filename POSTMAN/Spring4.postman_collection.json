@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "8f88679b-1dc5-4324-b24f-db24167bd426",
+		"name": "Spring4",
+		"description": "Test Postman acerca de Usuario,Cliente, ArticuloInsumo y Producto.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23646768"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://example-service-thrid.onrender.com/api/v1/usuario",
+							"protocol": "https",
+							"host": [
+								"example-service-thrid",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"auth0Id\": \"1478\",\r\n        \"username\": \"monikka\",\r\n        \"rol\": \"CLIENTE\",\r\n        \"fechaAlta\": \"2000-01-01T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2020-01-01T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2021-01-01T03:00:00.000+00:00\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"auth0Id\": \"0023\",\r\n        \"username\": \"PEPE MUJICA\",\r\n        \"rol\": \"ADMINISTRADOR\",\r\n        \"fechaAlta\": \"2000-01-01T00:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2020-01-01T00:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2021-01-01T00:00:00.000+00:00\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://example-service-thrid.onrender.com/api/v1/usuario/2",
+							"protocol": "https",
+							"host": [
+								"example-service-thrid",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuario/search?filtro=a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuario/paged?page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuario/searchPaged?filtro=nikka&page=0&size=5&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "nikka"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://example-service-thrid.onrender.com/api/v1/producto",
+							"protocol": "https",
+							"host": [
+								"example-service-thrid",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"denominacion\": \"Hamburguesa Familiar\",\r\n        \"descripcion\": \"Hamburguesa Doble Gigante de queso con lechuga, tomate, tocino, cebolla y pepinillo\",\r\n        \"tiempoEstimadoCocina\": 40.00,\r\n        \"precioVenta\": 3200.00,\r\n        \"costo\": 1500.00,\r\n        \"urlImagen\": \"\",\r\n         \"fechaAlta\": \"2021-11-07T03:00:00.000+00:00\",\r\n         \"fechaModificacion\": \"2021-11-07T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2021-11-07T03:00:00.000+00:00\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://example-service-thrid.onrender.com/api/v1/producto",
+							"protocol": "https",
+							"host": [
+								"example-service-thrid",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"denominacion\": \"Hamburguesa Dibu\",\r\n    \"descripcion\": \"Hamburguesa Triple Gigante de queso con lechuga, tomate, tocino, cebolla y pepinillo\",\r\n    \"tiempoEstimadoCocina\": 50,\r\n    \"precioVenta\": 4200.00,\r\n    \"costo\": 1500.00,\r\n    \"urlImagen\": \"\",\r\n    \"fechaAlta\": \"2021-11-07T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2021-11-07T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2021-11-07T03:00:00.000+00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/paged?page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/searchPaged?filtro=Hamburg&page=0&size=5&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Hamburg"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
