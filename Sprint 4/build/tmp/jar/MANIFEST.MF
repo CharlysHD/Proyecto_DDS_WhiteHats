@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Spring3Application: com.desarrollo.Spring3.Spring3Application
-
