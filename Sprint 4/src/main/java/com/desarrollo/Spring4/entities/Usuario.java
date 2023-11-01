@@ -17,9 +17,9 @@ import java.util.Date;
 @Table(name = "usuario")
 public class Usuario extends Base {
 
-    @NotNull
+    /*@NotNull
     @Column(name = "auth0_id", nullable = false, unique = true)
-    private String auth0Id;
+    private String auth0Id;*/
 
     @NotNull
     @Column(name = "username", nullable = false)
