@@ -61,7 +61,7 @@ public class Spring4Application {
 
 
 			Usuario usuario1 = Usuario.builder()
-					.auth0Id("123")
+					//.auth0Id("123")
 					.username("Admin")
 					.rol(Rol.CLIENTE)
 					.fechaAlta(format.parse("01-01-2000"))
@@ -69,7 +69,7 @@ public class Spring4Application {
 					.fechaBaja(format.parse("01-01-2021"))
 					.build();
 			Usuario usuario = Usuario.builder()
-					.auth0Id("4565")
+					//.auth0Id("4565")
 					.username("emple")
 					.rol(Rol.EMPLEADO)
 					.fechaAlta(format.parse("01-01-2000"))
