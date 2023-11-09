@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+/* Botones primarios */
+.btn-primary2 {
+    background-color: rgba(178, 156, 70, 1);
+    border-color: rgba(178, 156, 70, 1);
+}
+.btn-p2:hover {
+    background-color: rgb(114, 100, 46);
+    border-color: rgba(114, 100, 46);
+}
+.btn-p2:first-child:active, btn-p2-check:checked+.btn-primary2, .btn-p2.show, :not(.btn-p2-check)+.btn-p2:active {
+    background-color: rgb(114, 100, 46);
+    border-color: rgba(114, 100, 46);
+}
+/* Botones secundarios */
+.btn-secondary2 {
+    background-color: rgba(165, 35, 38, 1);
+    border-color:  rgba(165, 35, 38, 1);
+}
+.btn-s2:hover {
+    background-color: rgb(83, 18, 19);
+    border-color: rgba(83, 18, 19);
+}
+.btn-s2:first-child:active, btn-s2-check:checked+.btn-secondary2, .btn-s2.show, :not(.btn-s2-check)+.btn-s2:active {
+    background-color: rgb(83, 18, 19);
+    border-color: rgba(83, 18, 19);
+}
+/* Botones extras */
+.btn-ext1 {
+    background-color: rgba(rgba(215, 226, 202, 1));
+    border-color:  rgba(rgba(215, 226, 202, 1));
+}
+.btn-e1:hover {
+    background-color: rgba(100, 105, 94);
+    border-color: rgba(100, 105, 94);
+}
+.btn-e1:first-child:active, btn-e1-check:checked+.btn-ext1, .btn-e1.show, :not(.btn-e1-check)+.btn-e1:active {
+    background-color: rgb(100, 105, 94);
+    border-color: rgba(100, 105, 94);
+}
+/* Boton Google */
+.btn-google {
+    background-color: rgba(165, 35, 38, 1);
+    border-color:  rgba(165, 35, 38, 1);
+}
+.btn-g:hover {
+    background-color: rgb(83, 18, 19);
+    border-color: rgba(83, 18, 19);
+}
+.btn-g:first-child:active {
+    background-color: rgb(83, 18, 19);
+    border-color: rgba(83, 18, 19);
+}
+/* Fuentes */
+.h1 {
+    font-size: 57px;
+}
+.h2 {
+    font-size: 48px;
+}
+.h3 {
+    font-size: 40px;
+}
+.h4 {
+    font-size: 33px;
+}
+.h5 {
+    font-size: 28px;
+}
+.textoTablasHead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /*18px*/
+}
+.textoTablasRows {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* css HU3 u HU6 y HU6-1*/
+.col-form{
+    width: 340px;
+}
+
+/* CSS toggle password visibility eye and Validate Jquery Password and confirm password */
+.password-icon {
+    float: right;
+    position: relative;
+    margin: -25px 10px 0 0;
+    cursor: pointer;
+}
+
+.success-message {
+    color: green
+}
+
+.error-message {
+    color: red;
+}
+/* centrar texto HU15 */
+.centrar-text{
+    text-align: center;
+}
+.centrar-hr{
+    width: 50%;
+    margin-left: 25%;
+}
+/* ubicar estado en HU15 */
+.col-form2{
+    width: 340px;
+    display:flex ;
+}
+
+/* color boton en HU15 */
+.btn-sec-orange{
+    background-color: rgb(242, 126, 26);
+    border-color: rgb(242, 126, 26);
+}
+/* Mover buscador HU15 */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+
+
+
+}
+/* Espacio de iconos de tabla HU15 */
+.icon-table{
+    margin: 5px;
+}
+/* Boton invisible HU15 */
+.boton-invisible{
+    visibility: hidden;
+}
+/* Botones de tabla HU15 */
+.btn-table{
+    width: 94px;
+    height: 32px;
+    margin: 2px;
+}
+/* prop de filas de tabla HU15 */
+.acciones{
+    display: flex; 
+    flex-direction: row;
+}
+
+.col-button{
+    display: flex;
+    width: fit-content;
+margin: 10px;
+}
+

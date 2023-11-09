@@ -1,0 +1,33 @@
+
+thead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+tr {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.title{
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.contenedor-flexbox {
+    display: flex; /*Convertimos al menú en flexbox*/
+    justify-content: space-around; /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+    align-items: center; /*con esto alineamos de manera vertical*/
+}
+.seleccion{
+    display: flex;
+    justify-content: center;
+}
+.detalles{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.resumen{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}

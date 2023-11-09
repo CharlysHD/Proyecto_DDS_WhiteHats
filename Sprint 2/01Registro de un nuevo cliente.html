@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./01Registro de un nuevo cliente.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./b5Modificado.css">
+    
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="LogoNombre.svg" width="196" height="48" style="margin-left: 6rem;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item active positionCarrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width= "30" height="30" viewBox="0 0 576 512" style="fill: #B29C46;"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                </li>
+            </ul>
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                    <i class="fas fa-search" style="color: #B29C46;"></i>
+                </form>
+                
+                <div class="dropdown my-2 my-lg-0" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mi cuenta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark mx-md-n5" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                          <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+      </nav>
+  
+        <!--Imagen fondo-->
+        <div class="card mb-3">
+            <img class="card-img-top" src="1vc6te2q.png" width="1438" height="220" alt="fondo">
+        </div>
+    </header>
+
+    <section>
+          <section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="order-last col-lg-5 col-xl-6">
+        <!-- Botones de ingreso y registro -->
+          <div class="d-flex justify-content-around">
+            <!-- Ingresar -->
+            <button type="submit" class="btn-p2 btn-primary2 btn btn-primary btn-lg">Ingresar</button>
+          
+            <!-- Registrarme -->
+            <button type="submit" class="btn-p2 btn-primary2 btn btn-primary btn-lg">Registrarme</button>
+          </div>
+        <!-- Texto "OR" -->
+          <div class="divider my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+        <!-- Boton Google -->
+          <div class="d-grid gap-2 col-9 mx-auto">
+            <a class="btn-g btn-google btn btn-primary" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&ifkv=AYZoVhdJgvOM_J4dw6vVfJ_u7mRuCvbLPjKL2-Yr9f0_8img6t4vqHsBzQahwmeBVJtPYLqwUgb4&service=accountsettings&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S218983150%3A1694887609097567&theme=glif"
+              role="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" class="bi bi-google positionG" viewBox="0 0 16 16">
+                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+              </svg>Ingrese con Google</a>
+          </div>
+
+      </div>
+
+      <div class="order-first col-lg-7 col-xl-5 offset-xl-1">
+        <form>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form1Example13" class="form-control form-control-lg"/>
+            <label class="form-label" for="form1Example13">Email</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" id="form1Example23" class="form-control form-control-lg" />
+            <label class="form-label" for="form1Example23">Contraseña</label>
+          </div>
+
+          <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label class="form-check-label" for="form1Example3"> Recuérdame </label>
+            </div>
+            <a href="#!">¿Olvidó su contraseña?</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+          
+    </section>
+
+    <footer class="text-center" style="background: #A52326;">
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <a
+              class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+              <ul class="footer-list list-unstyled">
+                  <img src="LogoNombre.svg" width="261" height="48" alt="">
+                  <ul class="footer-list list-unstyled">
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512"
+                              style="fill: white;">
+                              <path
+                                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                          </svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512"
+                              style="fill: white;">
+                              <path
+                                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                          </svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 448 512"
+                              style="fill: white;">
+                              <path
+                                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                          </svg>
+                      </li>
+          </a>
+          </ul>
+          </ul>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h4 class="footer-title" style="color: #B29C46;">Contacto</h4>
+              <p>
+              <h5>+548619424522</h5>
+              </p>
+              <p>
+              <h5>av san martin 2340</h5>
+              </p>
+              <p>
+              <h5>ElbuenSabor@gmail.com</h5>
+              </p>
+          </div>
+      </div>
+      <div class="m-bottom-half p-bottom-quater">
+          <p style="background: #4D4D4D;" width="1440" height="201">&copy; 2023 El Buen Sabor | By The White Hats</p>
+      </div>
+  </footer>
+  
+  </body>
+</html>
