@@ -31,7 +31,7 @@ public class DetallePedido extends Base {
     private Rubro rubro;
 
     @ManyToOne()
-    @JoinColumn(name = "id_articulo_manufacturado")
+    @JoinColumn(name = "id_producto")
     private Producto producto;
 
     @NotNull

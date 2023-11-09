@@ -23,8 +23,6 @@ public class ClienteServiceImpl extends BaseServiceImpl<Cliente, Long> implement
     @Override
     public List<Cliente> search(String filtro) throws Exception {
         try{
-            //List<Persona> personas= personaRepository.findByNombreContainingOrApellidoContaining(filtro,filtro);
-            //List<Persona> personas = personaRepository.search(filtro);
             List<Cliente> clientes= clienteRepository.searchNativo(filtro);
             return clientes;
         }catch (Exception e) {
@@ -35,8 +33,6 @@ public class ClienteServiceImpl extends BaseServiceImpl<Cliente, Long> implement
     @Override
     public Page<Cliente> search(String filtro, Pageable pageable) throws Exception {
         try{
-            //Page<Persona> personas= personaRepository.findByNombreContainingOrApellidoContaining(filtro,filtro,pageable);
-            //Page<Persona> personas = personaRepository.search(filtro,pageable);
             Page<Cliente> clientes= clienteRepository.searchNativo(filtro, pageable);
             return clientes;
         }catch (Exception e) {

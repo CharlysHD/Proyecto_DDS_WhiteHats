@@ -35,7 +35,7 @@ public class DetalleProducto extends Base {
 
     @NotNull
     @ManyToOne()
-    @JoinColumn(name = "id_prodcuto")
+    @JoinColumn(name = "id_producto")
     private Producto producto;
 
 }
