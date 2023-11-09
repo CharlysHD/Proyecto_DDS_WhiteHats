@@ -13,7 +13,7 @@ public interface ProductoRepository extends BaseRepository<Producto, Long> {
      //Query nativa
 
     @Query(
-            value = "SELECT * FROM producto WHERE prodcuto.denominacion LIKE %:filtro%",
+            value = "SELECT * FROM producto WHERE producto.denominacion LIKE %:filtro%",
             nativeQuery = true
             //x defecto natQuery viene desactivado
     )

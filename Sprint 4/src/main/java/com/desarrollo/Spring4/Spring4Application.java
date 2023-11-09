@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 @SpringBootApplication
 public class Spring4Application {
@@ -217,6 +218,7 @@ public class Spring4Application {
 					.codVenta(23)
 					.importeTotal(2300)
 					//.ventaFacturas(ventaFactura)
+					//.ventaFacturas(List.of(ventaFactura, ventaFactura1))
 					.build();
 			Rubro rubro = Rubro.builder()
 					.denominacion("Batidos")
@@ -224,6 +226,8 @@ public class Spring4Application {
 					.fechaBaja(format.parse("07-11-2001"))
 					//.articuloInsumos(articuloInsumo)
 					//.detalleProductos(detalleProducto)
+					.articuloInsumos(List.of(articuloInsumo, articuloInsumo1))
+					//.detalleProductos(List.of(detalleProducto, detalleProducto1))
 					.build();
 			Rubro rubro1 = Rubro.builder()
 					.denominacion("Pizza")
