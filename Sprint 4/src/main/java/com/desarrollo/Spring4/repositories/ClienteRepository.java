@@ -11,7 +11,8 @@ import java.util.List;
 
 @Repository
 public interface ClienteRepository extends BaseRepository<Cliente, Long> {
-    //anotacion QUERY native
+
+    //Busqueda de un cliente segun nombre o apellido
     @Query(value = "SELECT * FROM cliente WHERE cliente.nombre LIKE %:filtro% OR cliente.apellido LIKE %:filtro%",
             nativeQuery = true
     )

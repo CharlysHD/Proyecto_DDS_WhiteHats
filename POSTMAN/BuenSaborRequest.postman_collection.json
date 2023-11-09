@@ -171,7 +171,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/producto?filtro=pizza&page=0&siza=5&sort=id,asc",
+							"raw": "http://localhost:8080/api/v1/producto?filtro=pizza&page=0&size=5&sort=id,asc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -192,7 +192,7 @@
 									"value": "0"
 								},
 								{
-									"key": "siza",
+									"key": "size",
 									"value": "5"
 								},
 								{
@@ -236,7 +236,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/usuario/2",
+							"raw": "http://localhost:8080/api/v1/usuario/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -246,7 +246,7 @@
 								"api",
 								"v1",
 								"usuario",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -493,6 +493,74 @@
 								"v1",
 								"cliente",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cliente/search?filtro=1995-08-09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "1995-08-09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cliente/search?filtro=pizza&page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "pizza"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
 							]
 						}
 					},
@@ -859,7 +927,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/factura/2",
+							"raw": "http://localhost:8080/api/v1/factura/8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -869,7 +937,7 @@
 								"api",
 								"v1",
 								"factura",
-								"2"
+								"8"
 							]
 						}
 					},
@@ -888,7 +956,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n        \"fechaAlta\": \"2023-11-14T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null,\r\n        \"fechaFacturacion\": \"2023-11-14T03:00:00.000+00:00\",\r\n        \"formaPago\": \"MERCADO_PAGO\",\r\n        \"mpMerchantOrderId\": null,\r\n        \"mpPaymentId\": null,\r\n        \"mpPaymentType\": null,\r\n        \"mpPreferenceId\": null,\r\n        \"totalVenta\": null,\r\n        \"pedido\": {\r\n            \"id\": 2,\r\n            \"total\": 99999.00,\r\n            \"totalCosto\": 99999.00,\r\n            \"estado\": \"ENTREGADO\",\r\n            \"tipoEnvio\": \"DELIVERY\",\r\n            \"formaPago\": \"MERCADO_PAGO\",\r\n            \"horaEstimadaFinalizacion\": null,\r\n            \"fechaAlta\": null,\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null,\r\n            \"fechaPedido\": null,\r\n            \"domicilioEntrega\": null,\r\n            \"cliente\": null\r\n        }\r\n    }"
+							"raw": " {\r\n        \"fechaAlta\": \"2023-11-14T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null,\r\n        \"fechaFacturacion\": \"2023-11-14T03:00:00.000+00:00\",\r\n        \"formaPago\": \"MERCADO_PAGO\",\r\n        \"mpMerchantOrderId\": null,\r\n        \"mpPaymentId\": null,\r\n        \"mpPaymentType\": null,\r\n        \"mpPreferenceId\": null,\r\n        \"totalVenta\": null,\r\n        \"pedido\": null\r\n }"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/factura",
@@ -919,6 +987,34 @@
 					"request": {
 						"method": "DELETE",
 						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/factura/search?filtro=1995-08-09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"factura",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "1995-08-09"
+								}
+							]
+						}
 					},
 					"response": []
 				}
