@@ -52,6 +52,5 @@ public class Producto extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    
 }
 

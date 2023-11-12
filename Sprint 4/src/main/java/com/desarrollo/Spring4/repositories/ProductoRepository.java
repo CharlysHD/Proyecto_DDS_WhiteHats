@@ -8,14 +8,12 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-
 public interface ProductoRepository extends BaseRepository<Producto, Long> {
-     //Query nativa
 
+     //Query nativa que busca todos los productos segun su denominacion
     @Query(
             value = "SELECT * FROM producto WHERE producto.denominacion LIKE %:filtro%",
             nativeQuery = true
-            //x defecto natQuery viene desactivado
     )
     List<Producto> searchNativo(@Param("filtro") String filtro);
 

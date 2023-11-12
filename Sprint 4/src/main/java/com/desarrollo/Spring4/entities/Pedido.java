@@ -20,7 +20,6 @@ import java.util.Date;
 @Builder
 public class Pedido extends Base {
 
-
     @NotNull
     @Column(name = "total", precision = 10, scale = 2)
     private BigDecimal total;
@@ -65,7 +64,6 @@ public class Pedido extends Base {
     @Column(name = "fecha_pedido")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaPedido;
-
 
     @NotNull
     @ManyToOne()

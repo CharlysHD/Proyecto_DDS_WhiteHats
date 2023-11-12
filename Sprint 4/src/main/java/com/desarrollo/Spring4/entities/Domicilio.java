@@ -37,7 +37,6 @@ public class Domicilio extends Base {
     @Column(name = "piso_vivienda")
     private Integer pisoDpto;
 
-
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -50,7 +49,6 @@ public class Domicilio extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
-
 
     @NotNull
     @ManyToOne()

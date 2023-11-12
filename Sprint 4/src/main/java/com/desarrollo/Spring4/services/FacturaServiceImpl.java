@@ -1,6 +1,5 @@
 package com.desarrollo.Spring4.services;
 
-import com.desarrollo.Spring4.entities.Cliente;
 import com.desarrollo.Spring4.entities.Factura;
 import com.desarrollo.Spring4.repositories.BaseRepository;
 import com.desarrollo.Spring4.repositories.FacturaRepository;

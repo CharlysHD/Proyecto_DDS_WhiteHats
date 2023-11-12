@@ -9,8 +9,8 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface UsuarioRepository extends BaseRepository<Usuario, Long> {
-    //Query nativa
 
+    //Query nativa que busca todos los datos de usuario segun su nombre
     @Query(
             value = "SELECT * FROM usuario WHERE usuario.username LIKE %:filtro%",
             nativeQuery = true

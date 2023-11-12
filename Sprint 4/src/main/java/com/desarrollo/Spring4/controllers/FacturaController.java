@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/factura")
 public class FacturaController extends BaseControllerImpl<Factura, FacturaServiceImpl>{
+
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro) {
         try {

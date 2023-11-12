@@ -17,11 +17,11 @@ import java.util.List;
 public class Venta extends Base {
 
     @NotNull
-    @Column(name = "codigo-venta")
+    @Column(name = "codigo_venta")
     private int codVenta;
 
     @NotNull
-    @Column(name = "importe-total")
+    @Column(name = "importe_total")
     private float importeTotal;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)

@@ -234,7 +234,7 @@ public class Spring4Application {
 					.build();
 
 			Venta venta = Venta.builder()
-					.codVenta(23)
+					.codVenta(24)
 					.importeTotal(2300)
 					//.ventaFacturas(ventaFactura)
 					.ventaFacturas(List.of(ventaFactura, ventaFactura1))
