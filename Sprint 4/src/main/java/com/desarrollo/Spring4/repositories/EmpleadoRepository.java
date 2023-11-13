@@ -3,4 +3,8 @@ package com.desarrollo.Spring4.repositories;
 import com.desarrollo.Spring4.entities.Empleado;
 
 public interface EmpleadoRepository extends BaseRepository<Empleado, Long> {
+  
+  //Busqueda de un empleado registrado desde X fechas
+    @Query(value = "SELECT * FROM empleado WHERE empleado.fecha_alta > :filtro", nativeQuery = true)
+    List<Empleado> searchNativo(@Param("filtro") String filtro);
 }
