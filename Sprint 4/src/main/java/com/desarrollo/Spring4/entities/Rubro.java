@@ -39,15 +39,12 @@ public class Rubro extends Base {
     private Date fechaBaja;
 
 
-
     @ManyToOne // Muchos rubros pueden tener un rubro padre
     @JoinColumn(name = "rubro_padre_id")
     private Rubro rubroPadre; // Referencia al rubro padre
 
     @OneToMany(mappedBy = "rubroPadre", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Rubro> subRubros = new ArrayList<>();
-
-
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
     @JoinColumn(name = "rubro-id")

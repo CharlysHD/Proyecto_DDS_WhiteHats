@@ -10,13 +10,10 @@ import java.util.List;
 
 public interface ArticuloInsumoRepository extends BaseRepository<ArticuloInsumo, Long> {
 
-
-       //Query nativa
-
+    //Query que trae todos los datos de articuloInsumo segun su denominacion
     @Query(
             value = "SELECT * FROM articuloinsumo WHERE articuloinsumo.denominacion LIKE %:filtro%",
             nativeQuery = true
-            //x defecto natQuery viene desactivado
     )
     List<ArticuloInsumo> searchNativo(@Param("filtro") String filtro);
 

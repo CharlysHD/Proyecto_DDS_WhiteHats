@@ -1,6 +1,7 @@
 package com.desarrollo.Spring4.services;
 
 import com.desarrollo.Spring4.entities.Base;
+import com.desarrollo.Spring4.entities.Cliente;
 import com.desarrollo.Spring4.repositories.BaseRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> implements BaseService<E, ID> {
+
     protected BaseRepository<E, ID> baseRepository;
     public BaseServiceImpl(BaseRepository<E, ID> baseRepository){
         this.baseRepository = baseRepository;
@@ -86,4 +88,5 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
             throw new Exception(e.getMessage());
         }
     }
+
 }

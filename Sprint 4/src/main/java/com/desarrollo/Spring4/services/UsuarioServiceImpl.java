@@ -12,6 +12,7 @@ import java.util.List;
 
 @Service
 public class UsuarioServiceImpl extends BaseServiceImpl<Usuario, Long> implements UsuarioService {
+
     @Autowired
     private UsuarioRepository usuarioRepository;
 

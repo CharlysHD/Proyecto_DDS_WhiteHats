@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/usuario")
 public class UsuarioController extends BaseControllerImpl<Usuario, UsuarioServiceImpl>{
+
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro) {
         try {

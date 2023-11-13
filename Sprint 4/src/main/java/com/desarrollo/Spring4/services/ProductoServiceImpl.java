@@ -21,7 +21,6 @@ public class ProductoServiceImpl extends BaseServiceImpl<Producto, Long> impleme
     @Override
     public List<Producto> search(String filtro) throws Exception {
         try {
-
             List<Producto> productos = productoRepository.searchNativo(filtro);
             return productos;
         } catch (Exception e) {
@@ -31,7 +30,6 @@ public class ProductoServiceImpl extends BaseServiceImpl<Producto, Long> impleme
     @Override
     public Page<Producto> search(String filtro, Pageable pageable) throws Exception {
         try{
-
             Page<Producto> productos= productoRepository.searchNativo(filtro, pageable);
             return productos;
         }catch (Exception e) {
