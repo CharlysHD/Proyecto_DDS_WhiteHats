@@ -14,4 +14,15 @@ public class EmpleadoServiceImpl extends BaseServiceImpl<Empleado, Long> impleme
     public EmpleadoServiceImpl(BaseRepository<Empleado, Long> baseRepository) {
         super(baseRepository);
     }
+    
+    @Override
+    public List<Empleado> search(String filtro) throws Exception {
+        try{
+            List<Empleado> empleados= empleadoRepository.searchNativo(filtro);
+            return empleados;
+        }catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+    
 }
