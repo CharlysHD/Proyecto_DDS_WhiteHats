@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "2d0a1c74-0da3-48cf-ac7f-0c87c01ea9d7",
-		"name": "BuenSaborRequest",
+		"_postman_id": "22be8176-98d3-4845-85b5-9947fd55cd1d",
+		"name": "BuenSaborRequest Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30193476"
+		"_exporter_id": "30204572"
 	},
 	"item": [
 		{
@@ -1440,7 +1440,10 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
@@ -1448,7 +1451,10 @@
 					"name": "Delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
@@ -1609,7 +1615,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pedido/search?filtro=DELIVERY",
+							"raw": "http://localhost:8080/api/v1/pedido/search?filtro=RETIRO",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1624,7 +1630,40 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "DELIVERY"
+									"value": "RETIRO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Fechas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedido/search/fechas?desde=2023-12-01&hasta=2023-12-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedido",
+								"search",
+								"fechas"
+							],
+							"query": [
+								{
+									"key": "desde",
+									"value": "2023-12-01"
+								},
+								{
+									"key": "hasta",
+									"value": "2023-12-10"
 								}
 							]
 						}
@@ -2101,7 +2140,10 @@
 					"name": "Delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				}
