@@ -1,0 +1,30 @@
+package com.desarrollo.Spring5.entities;
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.antlr.v4.runtime.misc.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "venta")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+public class Venta extends Base {
+
+    @NotNull
+    @Column(name = "codigo_venta")
+    private int codVenta;
+
+    @NotNull
+    @Column(name = "importe_total")
+    private float importeTotal;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
+    @JoinColumn(name = "codigo-venta")
+    private List<VentaFactura> ventaFacturas = new ArrayList<>();
+}
