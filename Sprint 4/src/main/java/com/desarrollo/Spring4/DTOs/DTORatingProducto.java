@@ -13,10 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @ToString
 public class DTORatingProducto extends Base {
- private Producto producto;
-     private BigDecimal ratingInsumo;
-     private String denominacion;
-
-
-
+    private Producto producto;
+    private BigDecimal ratingInsumo;
+    private String denominacion;
 }
