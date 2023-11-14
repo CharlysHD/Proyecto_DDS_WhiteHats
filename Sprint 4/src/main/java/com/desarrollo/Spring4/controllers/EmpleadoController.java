@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/empleado")
 public class EmpleadoController extends BaseControllerImpl<Empleado, EmpleadoServiceImpl>{
-  
-  @GetMapping("/search")
+
+    @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro) {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));

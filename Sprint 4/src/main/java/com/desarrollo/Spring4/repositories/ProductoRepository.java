@@ -24,4 +24,10 @@ public interface ProductoRepository extends BaseRepository<Producto, Long> {
             nativeQuery = true//x defecto natQuery viene desactivado
     )
     Page<Producto> searchNativo(@Param("filtro") String filtro, Pageable pageable);
+
+    @Query("select od.producto, sum(od.cantidad) as quantity from DetallePedido od " +
+            "where od.producto.denominacion like %:name% " +
+            "group by od.producto.id order by quantity desc "
+    )
+    List<Object> getTopProducts(@Param("name") String category);
 }

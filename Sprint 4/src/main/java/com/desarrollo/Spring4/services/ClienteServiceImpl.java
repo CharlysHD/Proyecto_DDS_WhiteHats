@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import org.springframework.data.domain.PageRequest;
 
 @Service
 public class ClienteServiceImpl extends BaseServiceImpl<Cliente, Long> implements ClienteService{
@@ -39,5 +40,11 @@ public class ClienteServiceImpl extends BaseServiceImpl<Cliente, Long> implement
             throw new Exception(e.getMessage());
         }
 
+    }
+
+    @Override
+    public List<Object> getTop5UsersOrders(int limit) {
+        List<Object> users = clienteRepository.getTop5UsersOrders(PageRequest.of(0, limit));
+        return users;
     }
 }

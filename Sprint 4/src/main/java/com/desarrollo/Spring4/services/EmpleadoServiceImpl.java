@@ -16,7 +16,7 @@ public class EmpleadoServiceImpl extends BaseServiceImpl<Empleado, Long> impleme
     public EmpleadoServiceImpl(BaseRepository<Empleado, Long> baseRepository) {
         super(baseRepository);
     }
-    
+
     @Override
     public List<Empleado> search(String filtro) throws Exception {
         try{
@@ -26,5 +26,5 @@ public class EmpleadoServiceImpl extends BaseServiceImpl<Empleado, Long> impleme
             throw new Exception(e.getMessage());
         }
     }
-    
+
 }

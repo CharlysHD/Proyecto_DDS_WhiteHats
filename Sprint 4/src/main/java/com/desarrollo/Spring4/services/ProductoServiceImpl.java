@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
 import java.util.List;
 
 @Service
@@ -37,4 +38,10 @@ public class ProductoServiceImpl extends BaseServiceImpl<Producto, Long> impleme
         }
 
     }
+
+    @Override
+    public List<Object> getTopProducts(String name) {
+        return productoRepository.getTopProducts(name);
+    }
+
 }

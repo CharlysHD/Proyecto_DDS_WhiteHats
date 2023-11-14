@@ -75,6 +75,12 @@ public class Spring4Application {
 					.fechaModificacion(format.parse("01-01-2020"))
 					.fechaBaja(format.parse("01-01-2021"))
 					.build();
+			Usuario usuario2 = Usuario.builder()
+					.username("empladelaño")
+					.rol(Rol.EMPLEADO)
+					.fechaAlta(format.parse("07-04-2020"))
+					.fechaBaja(format.parse("14-11-2030"))
+					.build();
 
 			Cliente cliente = Cliente.builder()
 					.nombre("Pedro")
@@ -86,9 +92,28 @@ public class Spring4Application {
 					.fechaBaja(format.parse("07-11-2021"))
 					.usuario(usuario1)
 					.build();
+			Cliente cliente1 = Cliente.builder()
+					.nombre("Jorge")
+					.apellido("Simpson")
+					.email("georgesimpson@gmail.com")
+					.telefono("2614816169")
+					.fechaAlta(format.parse("07-10-2021"))
+					.fechaModificacion(format.parse("08-10-2021"))
+					.fechaBaja(format.parse("07-11-2021"))
+					.build();
+
+			Cliente cliente2 = Cliente.builder()
+					.nombre("Lisa")
+					.apellido("Simpson")
+					.email("simpsonl@gmail.com")
+					.telefono("2614816169")
+					.fechaAlta(format.parse("07-10-2021"))
+					.fechaModificacion(format.parse("08-10-2021"))
+					.fechaBaja(format.parse("07-11-2021"))
+					.build();
 
 			Empleado empleado = Empleado.builder()
-					.rolEmpleado(RolEmpleado.CAJERO)
+					.rolEmpleado(RolEmpleado.COCINERO)
 					.nombre("Omar")
 					.apellido("Lopez")
 					.email("lopezo@live.com.ar")
@@ -97,6 +122,16 @@ public class Spring4Application {
 					.fechaModificacion(format.parse("07-11-2021"))
 					.fechaBaja(format.parse("14-11-2023"))
 					.usuario(usuario)
+					.build();
+			Empleado empleado1 = Empleado.builder()
+					.rolEmpleado(RolEmpleado.CAJERO)
+					.nombre("Javier")
+					.apellido("Vargas")
+					.email("java@gmail.com")
+					.telefono("2618903672")
+					.fechaAlta(format.parse("07-04-2020"))
+					.fechaBaja(format.parse("14-11-2030"))
+					.usuario(usuario2)
 					.build();
 
 			UnidadMedida unidadMedida = UnidadMedida.builder()
@@ -157,7 +192,7 @@ public class Spring4Application {
 					.formaPago(FormaPago.MERCADO_PAGO)
 					.fechaPedido(format.parse("14-11-2023"))
 					.domicilioEntrega(domicilio1)
-					.cliente(cliente)
+					.cliente(cliente1)
 					.build();
 
 			Pedido pedido = Pedido.builder()
@@ -167,6 +202,7 @@ public class Spring4Application {
 					.tipoEnvio(TipoEnvio.DELIVERY)
 					.formaPago(FormaPago.MERCADO_PAGO)
 					.domicilioEntrega(domicilio)
+					.cliente(cliente1)
 					.build();
 
 			ArticuloInsumo articuloInsumo = ArticuloInsumo.builder()
@@ -281,6 +317,7 @@ public class Spring4Application {
 			unidadMedidaRepository.save(unidadMedida);
 			usuarioRepository.save(usuario);
 			usuarioRepository.save(usuario1);
+			usuarioRepository.save(usuario2);
 
 // Luego, guarda las entidades que dependen de unidadesMedida, usuario y usuario1
 			productoRepository.save(producto);
@@ -288,8 +325,11 @@ public class Spring4Application {
 			rubroRepository.save(rubro1);
 			rubroRepository.save(rubro);
 			clienteRepository.save(cliente);
+			clienteRepository.save(cliente1);
+			clienteRepository.save(cliente2);
 
 			empleadoRepository.save(empleado);
+			empleadoRepository.save(empleado1);
 			domicilioRepository.save(domicilio);
 			domicilioRepository.save(domicilio1);
 

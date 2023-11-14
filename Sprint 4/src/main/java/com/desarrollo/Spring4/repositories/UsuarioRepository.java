@@ -18,6 +18,8 @@ public interface UsuarioRepository extends BaseRepository<Usuario, Long> {
     )
     List<Usuario> searchNativo(@Param("filtro") String filtro);
 
+
+
     //Querys q reciben paginacion
     @Query(
             value = "SELECT * FROM usuario WHERE usuario.username LIKE %:filtro%",

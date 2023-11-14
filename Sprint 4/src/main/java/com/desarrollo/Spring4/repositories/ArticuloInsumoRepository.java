@@ -12,7 +12,7 @@ public interface ArticuloInsumoRepository extends BaseRepository<ArticuloInsumo,
 
     //Query que trae todos los datos de articuloInsumo segun su denominacion
     @Query(
-            value = "SELECT * FROM articuloinsumo WHERE articuloinsumo.denominacion LIKE %:filtro%",
+            value = "SELECT * FROM articuloinsumo WHERE articuloinsumo.stock_minimo < :filtro",
             nativeQuery = true
     )
     List<ArticuloInsumo> searchNativo(@Param("filtro") String filtro);
