@@ -26,7 +26,16 @@ const Header = () =>{
               <Nav.Link onClick={()=>navigate('/')}>Home</Nav.Link>
               <Nav.Link onClick={()=>navigate('/componentes')}>Componentes</Nav.Link>
               <Nav.Link onClick={()=>navigate('/administración')}>Administración</Nav.Link>
-              <Nav.Link onClick={()=>navigate('/empleados')}>Empleados</Nav.Link>   
+              <Nav.Link onClick={()=>navigate('/empleados')}>Empleados</Nav.Link>
+              
+              <Nav.Link onClick={()=>navigate('/articuloinsumo')}>ArticuloInsumo</Nav.Link>
+              <Nav.Link onClick={()=>navigate('/rubro')}>Rubro</Nav.Link>
+              <Nav.Link onClick={()=>navigate('/cliente')}>Cliente</Nav.Link>
+              <Nav.Link onClick={()=>navigate('/pedido')}>Pedido</Nav.Link>
+              <Nav.Link onClick={()=>navigate('/domicilio')}>Domicilio</Nav.Link>
+              
+              <Nav.Link onClick={()=>navigate('/empleados')}>Empleados</Nav.Link>
+              
               {isLoggedIn && <Nav.Link onClick={onLogOut}>Log Out</Nav.Link>}
 
             </Nav>
