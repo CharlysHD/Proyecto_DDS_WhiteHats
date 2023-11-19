@@ -1,6 +1,7 @@
 package com.desarrollo.Spring4.services;
 
 import com.desarrollo.Spring4.entities.Pedido;
+import com.desarrollo.Spring4.enums.EstadoPedido;
 import com.desarrollo.Spring4.repositories.BaseRepository;
 import com.desarrollo.Spring4.repositories.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,20 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido, Long> implements 
     }
 
     @Override
-    public List<Pedido> search(String filtro) throws Exception {
+    public List<Pedido> search(String filtro, EstadoPedido estado) throws Exception {
         try{
-            List<Pedido> pedidos= pedidoRepository.searchNativo(filtro);
+            List<Pedido> pedidos= pedidoRepository.searchNativo(filtro, estado);
+            return pedidos;
+        }catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+
+    }
+
+    @Override
+    public List<Pedido> search(String desde, String hasta) throws Exception {
+        try{
+            List<Pedido> pedidos= pedidoRepository.searchNativo2(desde, hasta);
             return pedidos;
         }catch (Exception e) {
             throw new Exception(e.getMessage());

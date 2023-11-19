@@ -25,9 +25,11 @@ public interface ProductoRepository extends BaseRepository<Producto, Long> {
     )
     Page<Producto> searchNativo(@Param("filtro") String filtro, Pageable pageable);
 
-    @Query("select od.producto, sum(od.cantidad) as quantity from DetallePedido od " +
-            "where od.producto.denominacion like %:name% " +
-            "group by od.producto.id order by quantity desc "
-    )
-    List<Object> getTopProducts(@Param("name") String category);
+    //Top 5 productos que aparezcan en un detallefactura
+    @Query("SELECT p, COUNT(o) as pedidos, Sum(o.cantidad) as total " +
+            "FROM Producto p " +
+            "JOIN DetalleFactura o ON p.id = o.producto.id " +
+            "GROUP BY p.id " +
+            "ORDER BY pedidos desc")
+    List<Object>getTop5Products(Pageable pageable);
 }

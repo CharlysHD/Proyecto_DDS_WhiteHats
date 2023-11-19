@@ -18,9 +18,9 @@ public class EmpleadoServiceImpl extends BaseServiceImpl<Empleado, Long> impleme
     }
 
     @Override
-    public List<Empleado> search(String filtro) throws Exception {
+    public List<Empleado> search(String inicio, String fin) throws Exception {
         try{
-            List<Empleado> empleados= empleadoRepository.searchNativo(filtro);
+            List<Empleado> empleados= empleadoRepository.searchNativo(inicio, fin);
             return empleados;
         }catch (Exception e) {
             throw new Exception(e.getMessage());

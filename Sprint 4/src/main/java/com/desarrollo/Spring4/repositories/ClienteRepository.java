@@ -24,6 +24,7 @@ public interface ClienteRepository extends BaseRepository<Cliente, Long> {
     )
     Page<Cliente> searchNativo(@Param("filtro") String filtro, Pageable pageable);
 
+    //Top 5 clientes que tengan un pedido relacionado
     @Query("SELECT c, COUNT(o) as pedidos, Sum(o.total) as total " +
             "FROM Cliente c " +
             "JOIN Pedido o ON c.id = o.cliente.id " +

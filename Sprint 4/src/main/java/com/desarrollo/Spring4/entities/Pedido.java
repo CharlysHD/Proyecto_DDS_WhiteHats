@@ -30,6 +30,7 @@ public class Pedido extends Base {
 
     @NotNull
     @Enumerated(EnumType.STRING)
+    @Column(name = "estado_pedido")
     private EstadoPedido estado;
 
     @NotNull

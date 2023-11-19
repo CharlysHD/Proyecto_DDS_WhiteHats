@@ -5,5 +5,5 @@ import com.desarrollo.Spring4.entities.Empleado;
 import java.util.List;
 
 public interface EmpleadoService extends BaseService<Empleado, Long>{
-    List<Empleado> search(String filtro) throws Exception;
+    List<Empleado> search(String inicio, String fin) throws Exception;
 }

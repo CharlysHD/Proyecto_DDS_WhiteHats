@@ -30,11 +30,10 @@ public class ProductoController extends BaseControllerImpl<Producto, ProductoSer
     }
 
     @GetMapping("/topProducts")
-    public ResponseEntity<?> getTopProducts(@PathVariable String name){
+    public ResponseEntity<?> getTop5Products(@RequestParam int limit,@RequestParam String orderBy){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.getTopProducts(name));
-        }
-        catch (Exception e){
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.getTop5Products(limit));
+        }catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error. Por favor intente luego\"}");
         }
     }

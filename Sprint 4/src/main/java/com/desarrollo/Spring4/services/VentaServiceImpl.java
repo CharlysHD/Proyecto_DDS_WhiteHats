@@ -4,6 +4,7 @@ import com.desarrollo.Spring4.entities.Venta;
 import com.desarrollo.Spring4.repositories.BaseRepository;
 import com.desarrollo.Spring4.repositories.VentaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,6 +25,6 @@ public class VentaServiceImpl extends BaseServiceImpl<Venta, Long> implements Ve
         }catch (Exception e) {
             throw new Exception(e.getMessage());
         }
-
     }
+
 }

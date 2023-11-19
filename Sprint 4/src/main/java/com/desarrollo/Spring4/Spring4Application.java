@@ -61,16 +61,16 @@ public class Spring4Application {
 			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
 
-			Usuario usuario1 = Usuario.builder()
-					.username("Blue")
-					.rol(Rol.CLIENTE)
+			Usuario usuario = Usuario.builder()
+					.username("Admin")
+					.rol(Rol.EMPLEADO)
 					.fechaAlta(format.parse("01-01-2000"))
 					.fechaModificacion(format.parse("01-01-2020"))
 					.fechaBaja(format.parse("01-01-2021"))
 					.build();
-			Usuario usuario = Usuario.builder()
-					.username("Admin")
-					.rol(Rol.EMPLEADO)
+			Usuario usuario1 = Usuario.builder()
+					.username("Blue")
+					.rol(Rol.CLIENTE)
 					.fechaAlta(format.parse("01-01-2000"))
 					.fechaModificacion(format.parse("01-01-2020"))
 					.fechaBaja(format.parse("01-01-2021"))
@@ -184,6 +184,15 @@ public class Spring4Application {
 					.fechaAlta(format.parse("07-11-2021"))
 					.build();
 
+			Pedido pedido = Pedido.builder()
+					.total(BigDecimal.valueOf(99999))
+					.totalCosto(BigDecimal.valueOf(99999))
+					.estado(EstadoPedido.ENTREGADO)
+					.tipoEnvio(TipoEnvio.DELIVERY)
+					.formaPago(FormaPago.MERCADO_PAGO)
+					.domicilioEntrega(domicilio)
+					.cliente(cliente1)
+					.build();
 			Pedido pedido1 = Pedido.builder()
 					.total(BigDecimal.valueOf(99999))
 					.totalCosto(BigDecimal.valueOf(999999))
@@ -192,16 +201,6 @@ public class Spring4Application {
 					.formaPago(FormaPago.MERCADO_PAGO)
 					.fechaPedido(format.parse("14-11-2023"))
 					.domicilioEntrega(domicilio1)
-					.cliente(cliente1)
-					.build();
-
-			Pedido pedido = Pedido.builder()
-					.total(BigDecimal.valueOf(99999))
-					.totalCosto(BigDecimal.valueOf(99999))
-					.estado(EstadoPedido.ENTREGADO)
-					.tipoEnvio(TipoEnvio.DELIVERY)
-					.formaPago(FormaPago.MERCADO_PAGO)
-					.domicilioEntrega(domicilio)
 					.cliente(cliente1)
 					.build();
 
@@ -272,15 +271,12 @@ public class Spring4Application {
 			Venta venta = Venta.builder()
 					.codVenta(24)
 					.importeTotal(2300)
-					//.ventaFacturas(ventaFactura)
 					.ventaFacturas(List.of(ventaFactura, ventaFactura1))
 					.build();
 
 			Rubro rubro = Rubro.builder()
 					.denominacion("Pizza")
 					.fechaAlta(format.parse("07-01-2000"))
-					//.articuloInsumos(articuloInsumo)
-					//.detalleProductos(detalleProducto)
 					.articuloInsumos(List.of(articuloInsumo, articuloInsumo1))
 					.detalleProductos(List.of(detalleProducto, detalleProducto1))
 					.build();
@@ -297,6 +293,14 @@ public class Spring4Application {
 					.factura(factura1)
 					.rubro(rubro)
 					.producto(producto)
+					.build();
+			DetalleFactura detalleFactura1 = DetalleFactura.builder()
+					.subtotal(BigDecimal.valueOf(2300))
+					.cantidad(4)
+					.factura(factura)
+					.factura(factura1)
+					.rubro(rubro)
+					.producto(producto1)
 					.build();
 
 			DetallePedido detallePedido1 = DetallePedido.builder()
@@ -343,6 +347,7 @@ public class Spring4Application {
 			ventaRepository.save(venta);
 			ventaFacturaRepository.save(ventaFactura);
 			detalleFacturaRepository.save(detalleFactura);
+			detalleFacturaRepository.save(detalleFactura1);
 			detalleProductoRepository.save(detalleProducto);
 			articuloInsumoRepository.save(articuloInsumo);
 			articuloInsumoRepository.save(articuloInsumo1);
