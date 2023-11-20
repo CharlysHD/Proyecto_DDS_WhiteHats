@@ -28,5 +28,14 @@ public class ProductoController extends BaseControllerImpl<Producto, ProductoSer
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" +e.getMessage() + "\"}"));
         }
     }
+
+    @GetMapping("/topProducts")
+    public ResponseEntity<?> getTop5Products(@RequestParam int limit,@RequestParam String orderBy){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.getTop5Products(limit));
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error. Por favor intente luego\"}");
+        }
+    }
     
 }

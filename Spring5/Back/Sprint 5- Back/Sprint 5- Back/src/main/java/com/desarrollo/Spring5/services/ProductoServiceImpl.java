@@ -4,6 +4,7 @@ import com.desarrollo.Spring5.entities.Producto;
 import com.desarrollo.Spring5.repositories.BaseRepository;
 import com.desarrollo.Spring5.repositories.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -36,5 +37,11 @@ public class ProductoServiceImpl extends BaseServiceImpl<Producto, Long> impleme
             throw new Exception(e.getMessage());
         }
 
+    }
+
+    @Override
+    public List<Object> getTop5Products(int limit) {
+        List<Object> products = productoRepository.getTop5Products(PageRequest.of(0, limit));
+        return products;
     }
 }

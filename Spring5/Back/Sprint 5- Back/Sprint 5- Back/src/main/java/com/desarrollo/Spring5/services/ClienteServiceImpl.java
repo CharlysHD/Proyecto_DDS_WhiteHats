@@ -5,6 +5,7 @@ import com.desarrollo.Spring5.repositories.ClienteRepository;
 import com.desarrollo.Spring5.repositories.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -39,5 +40,11 @@ public class ClienteServiceImpl extends BaseServiceImpl<Cliente, Long> implement
             throw new Exception(e.getMessage());
         }
 
+    }
+
+    @Override
+    public List<Object> getTop5UsersOrders(int limit) {
+        List<Object> users = clienteRepository.getTop5UsersOrders(PageRequest.of(0, limit));
+        return users;
     }
 }

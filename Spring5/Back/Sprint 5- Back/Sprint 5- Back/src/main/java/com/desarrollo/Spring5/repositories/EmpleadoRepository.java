@@ -6,8 +6,8 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 public interface EmpleadoRepository extends BaseRepository<Empleado, Long> {
-  
+
   //Busqueda de un empleado registrado desde X fechas
-    @Query(value = "SELECT * FROM empleado WHERE empleado.fecha_alta > :filtro", nativeQuery = true)
-    List<Empleado> searchNativo(@Param("filtro") String filtro);
+  @Query(value = "SELECT * FROM empleado WHERE empleado.fecha_alta BETWEEN :inicio AND :fin", nativeQuery = true)
+  List<Empleado> searchNativo(@Param("inicio") String inicio, @Param("fin") String fin );
 }

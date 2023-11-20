@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ProductoRepository extends BaseRepository<Producto, Long> {
 
-     //Query nativa que busca todos los productos segun su denominacion
+    //Query nativa que busca todos los productos segun su denominacion
     @Query(
             value = "SELECT * FROM producto WHERE producto.denominacion LIKE %:filtro%",
             nativeQuery = true
@@ -24,4 +24,12 @@ public interface ProductoRepository extends BaseRepository<Producto, Long> {
             nativeQuery = true//x defecto natQuery viene desactivado
     )
     Page<Producto> searchNativo(@Param("filtro") String filtro, Pageable pageable);
+
+    //Top 5 productos que aparezcan en un detallefactura
+    @Query("SELECT p, COUNT(o) as pedidos, Sum(o.cantidad) as total " +
+            "FROM Producto p " +
+            "JOIN DetalleFactura o ON p.id = o.producto.id " +
+            "GROUP BY p.id " +
+            "ORDER BY pedidos desc")
+    List<Object>getTop5Products(Pageable pageable);
 }
