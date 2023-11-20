@@ -61,6 +61,13 @@ public class Spring5Application {
 			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
 
+			Usuario usuario = Usuario.builder()
+					.username("Admin")
+					.rol(Rol.EMPLEADO)
+					.fechaAlta(format.parse("01-01-2000"))
+					.fechaModificacion(format.parse("01-01-2020"))
+					.fechaBaja(format.parse("01-01-2021"))
+					.build();
 			Usuario usuario1 = Usuario.builder()
 					.username("Blue")
 					.rol(Rol.CLIENTE)
@@ -68,12 +75,11 @@ public class Spring5Application {
 					.fechaModificacion(format.parse("01-01-2020"))
 					.fechaBaja(format.parse("01-01-2021"))
 					.build();
-			Usuario usuario = Usuario.builder()
-					.username("Admin")
+			Usuario usuario2 = Usuario.builder()
+					.username("empladelaño")
 					.rol(Rol.EMPLEADO)
-					.fechaAlta(format.parse("01-01-2000"))
-					.fechaModificacion(format.parse("01-01-2020"))
-					.fechaBaja(format.parse("01-01-2021"))
+					.fechaAlta(format.parse("07-04-2020"))
+					.fechaBaja(format.parse("14-11-2030"))
 					.build();
 
 			Cliente cliente = Cliente.builder()
@@ -86,9 +92,28 @@ public class Spring5Application {
 					.fechaBaja(format.parse("07-11-2021"))
 					.usuario(usuario1)
 					.build();
+			Cliente cliente1 = Cliente.builder()
+					.nombre("Jorge")
+					.apellido("Simpson")
+					.email("georgesimpson@gmail.com")
+					.telefono("2614816169")
+					.fechaAlta(format.parse("07-10-2021"))
+					.fechaModificacion(format.parse("08-10-2021"))
+					.fechaBaja(format.parse("07-11-2021"))
+					.build();
+
+			Cliente cliente2 = Cliente.builder()
+					.nombre("Lisa")
+					.apellido("Simpson")
+					.email("simpsonl@gmail.com")
+					.telefono("2614816169")
+					.fechaAlta(format.parse("07-10-2021"))
+					.fechaModificacion(format.parse("08-10-2021"))
+					.fechaBaja(format.parse("07-11-2021"))
+					.build();
 
 			Empleado empleado = Empleado.builder()
-					.rolEmpleado(RolEmpleado.CAJERO)
+					.rolEmpleado(RolEmpleado.COCINERO)
 					.nombre("Omar")
 					.apellido("Lopez")
 					.email("lopezo@live.com.ar")
@@ -97,6 +122,16 @@ public class Spring5Application {
 					.fechaModificacion(format.parse("07-11-2021"))
 					.fechaBaja(format.parse("14-11-2023"))
 					.usuario(usuario)
+					.build();
+			Empleado empleado1 = Empleado.builder()
+					.rolEmpleado(RolEmpleado.CAJERO)
+					.nombre("Javier")
+					.apellido("Vargas")
+					.email("java@gmail.com")
+					.telefono("2618903672")
+					.fechaAlta(format.parse("07-04-2020"))
+					.fechaBaja(format.parse("14-11-2030"))
+					.usuario(usuario2)
 					.build();
 
 			UnidadMedida unidadMedida = UnidadMedida.builder()
@@ -149,6 +184,15 @@ public class Spring5Application {
 					.fechaAlta(format.parse("07-11-2021"))
 					.build();
 
+			Pedido pedido = Pedido.builder()
+					.total(BigDecimal.valueOf(99999))
+					.totalCosto(BigDecimal.valueOf(99999))
+					.estado(EstadoPedido.ENTREGADO)
+					.tipoEnvio(TipoEnvio.DELIVERY)
+					.formaPago(FormaPago.MERCADO_PAGO)
+					.domicilioEntrega(domicilio)
+					.cliente(cliente1)
+					.build();
 			Pedido pedido1 = Pedido.builder()
 					.total(BigDecimal.valueOf(99999))
 					.totalCosto(BigDecimal.valueOf(999999))
@@ -157,16 +201,7 @@ public class Spring5Application {
 					.formaPago(FormaPago.MERCADO_PAGO)
 					.fechaPedido(format.parse("14-11-2023"))
 					.domicilioEntrega(domicilio1)
-					.cliente(cliente)
-					.build();
-
-			Pedido pedido = Pedido.builder()
-					.total(BigDecimal.valueOf(99999))
-					.totalCosto(BigDecimal.valueOf(99999))
-					.estado(EstadoPedido.ENTREGADO)
-					.tipoEnvio(TipoEnvio.DELIVERY)
-					.formaPago(FormaPago.MERCADO_PAGO)
-					.domicilioEntrega(domicilio)
+					.cliente(cliente1)
 					.build();
 
 			ArticuloInsumo articuloInsumo = ArticuloInsumo.builder()
@@ -236,15 +271,12 @@ public class Spring5Application {
 			Venta venta = Venta.builder()
 					.codVenta(24)
 					.importeTotal(2300)
-					//.ventaFacturas(ventaFactura)
 					.ventaFacturas(List.of(ventaFactura, ventaFactura1))
 					.build();
 
 			Rubro rubro = Rubro.builder()
 					.denominacion("Pizza")
 					.fechaAlta(format.parse("07-01-2000"))
-					//.articuloInsumos(articuloInsumo)
-					//.detalleProductos(detalleProducto)
 					.articuloInsumos(List.of(articuloInsumo, articuloInsumo1))
 					.detalleProductos(List.of(detalleProducto, detalleProducto1))
 					.build();
@@ -261,6 +293,14 @@ public class Spring5Application {
 					.factura(factura1)
 					.rubro(rubro)
 					.producto(producto)
+					.build();
+			DetalleFactura detalleFactura1 = DetalleFactura.builder()
+					.subtotal(BigDecimal.valueOf(2300))
+					.cantidad(4)
+					.factura(factura)
+					.factura(factura1)
+					.rubro(rubro)
+					.producto(producto1)
 					.build();
 
 			DetallePedido detallePedido1 = DetallePedido.builder()
@@ -281,6 +321,7 @@ public class Spring5Application {
 			unidadMedidaRepository.save(unidadMedida);
 			usuarioRepository.save(usuario);
 			usuarioRepository.save(usuario1);
+			usuarioRepository.save(usuario2);
 
 // Luego, guarda las entidades que dependen de unidadesMedida, usuario y usuario1
 			productoRepository.save(producto);
@@ -288,8 +329,11 @@ public class Spring5Application {
 			rubroRepository.save(rubro1);
 			rubroRepository.save(rubro);
 			clienteRepository.save(cliente);
+			clienteRepository.save(cliente1);
+			clienteRepository.save(cliente2);
 
 			empleadoRepository.save(empleado);
+			empleadoRepository.save(empleado1);
 			domicilioRepository.save(domicilio);
 			domicilioRepository.save(domicilio1);
 
@@ -303,10 +347,10 @@ public class Spring5Application {
 			ventaRepository.save(venta);
 			ventaFacturaRepository.save(ventaFactura);
 			detalleFacturaRepository.save(detalleFactura);
+			detalleFacturaRepository.save(detalleFactura1);
 			detalleProductoRepository.save(detalleProducto);
 			articuloInsumoRepository.save(articuloInsumo);
 			articuloInsumoRepository.save(articuloInsumo1);
-
 		};
 	}
 }
