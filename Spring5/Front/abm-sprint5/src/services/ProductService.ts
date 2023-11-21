@@ -1,7 +1,8 @@
 import { Producto } from '../types/Product';
 
 
-const BASE_URL = 'https://example-service-thrid.onrender.com';
+const BASE_URL = 'https://example-service-fourth.onrender.com';
+
 
 
 export const ProductService = {
@@ -18,11 +19,12 @@ export const ProductService = {
         return data;
     },
 
-    createProduct: async (producto: Producto): Promise<Producto> => {
+    createProduct: async (producto: Producto, token:string): Promise<Producto> => {
         const response = await fetch(`${BASE_URL}/api/v1/producto`, {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify(producto)
         });
