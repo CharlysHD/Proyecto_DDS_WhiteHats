@@ -2,7 +2,7 @@ import { Producto } from '../types/Product';
 
 
 const BASE_URL = 'https://example-service-fourth.onrender.com';
-
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
 
 
 export const ProductService = {
@@ -19,7 +19,7 @@ export const ProductService = {
         return data;
     },
 
-    createProduct: async (producto: Producto, token:string): Promise<Producto> => {
+    createProduct: async (producto: Producto): Promise<Producto> => {
         const response = await fetch(`${BASE_URL}/api/v1/producto`, {
             method: "POST",
             headers: {
