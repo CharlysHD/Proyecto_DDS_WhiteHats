@@ -1,6 +1,5 @@
 import { Producto } from '../types/Product';
 
-
 const BASE_URL = 'https://example-service-fourth.onrender.com';
 const token = localStorage.getItem('token');
 
