@@ -1,7 +1,7 @@
 const Footer = () =>{
     return(
-        <footer className="mt-auto py-3 bg-dark text-white">
-            <div className="container">
+        <footer className="mt-auto py-3 text-white" style={{backgroundColor:"#A52326"}}  >
+            <div className="container" >
                 <div className="row">
                     <div className="col-md-6 col-12">
                         <h3>ElBuenSabor</h3>
